@@ -148,9 +148,10 @@ table {
 
 .icon-phone::before {
     content: "\e69c";
-    margin-right: 15px;
 }
-
+header .icon-phone::before{
+    margin-right: 16px;
+}
 a:hover {
     color: #FF3366;
 }
@@ -779,3 +780,49 @@ address {
     font-size: 24px;
     color: #FF3366;
 }
+
+/* sidebar */
+
+aside {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 36px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+aside .icon-phone::before{
+    color: #FF3366;
+}
+
+.icon-user::before{
+    content: '\e616';
+    color: #FF3366;
+}
+.icon-arrow-up::before{
+    content: '\e661';
+    color: #FF3366;
+    visibility: hidden;
+}
+.ques-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF3366;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 18px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+.quick-btn{
+    position: absolute;
+    bottom: 10px;
+}
+.quick-btn a::before{
+    margin: 28px 11px;
+}
+
