@@ -1,0 +1,781 @@
+/* reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+
+select,
+input,
+button {
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0px;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+small {
+    font-size: 12px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset,
+img {
+    border: 0;
+    vertical-align: bottom;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* icon */
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont.woff') format('woff'), url('iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone::before {
+    content: "\e69c";
+    margin-right: 15px;
+}
+
+a:hover {
+    color: #FF3366;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* white-space:nowrap */
+}
+
+/* header */
+
+header {
+    display: flex;
+    width: 100%;
+    /* white-space:nowrap; */
+    height: 64px;
+}
+
+.head-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 下拉 */
+
+.dropdown {
+    font-size: 16px;
+    color: #2C2C2C;
+    margin-left: 24px;
+    border: 1px solid hsla(0, 0%, 59%, .2);
+    border-radius: 4px;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+
+.icon-arrow-down::after {
+    margin-left: 9px;
+    content: '\e65e';
+    color: #FF3366;
+}
+
+/* logo */
+
+header img {
+    height: 24px;
+}
+
+/* 导航 */
+
+header nav {
+    margin-left: 258px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+header nav a {
+    color: #555555;
+    margin-right: 48px;
+}
+
+header nav a:hover,
+header nav a:visited,
+header nav a:focus {
+    color: #FF3366;
+}
+
+.active {
+    color: #FF3366;
+}
+
+/* 轮播图 */
+
+.carousel {
+    /* white-space:nowrap; */
+    width: 100%;
+    height: 460px;
+    background: url(../images/5df8197b-9828-4ee2-b3f8-f0bae1cd19f4.jpg@!1920w_126h_jpg_web) no-repeat center center;
+}
+
+/* search */
+
+.search {
+    /* white-space:nowrap; */
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+}
+
+.search input {
+    box-sizing: border-box;
+    width: 611px;
+    height: 100%;
+    font-size: 14px;
+    color: #8A8A8A;
+    letter-spacing: 0.64px;
+    border: 1px solid #E5E5E5;
+    padding-left: 16px;
+}
+
+.search button {
+    background: #FF3366;
+    height: 44px;
+    width: 120px;
+    border-radius: 0 5px 5px 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/* link */
+
+.search ul li {
+    float: left;
+    margin-left: 16px;
+}
+
+.search a {
+    font-size: 14px;
+    color: #212121;
+    letter-spacing: 0.64px;
+}
+
+.search a:hover {
+    color: #FF3366;
+}
+
+/* 推荐房源 */
+
+.recommend {
+    /* white-space:nowrap; */
+    width: 100%;
+    height: 475px;
+    background: #F8F8F8;
+    text-align: center;
+}
+
+.recommend>div {
+    display: inline-block;
+    text-align: left;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.section-title span:nth-child(2) {
+    float: right;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.section-title span:nth-child(2):hover {
+    color: #FF3366;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    margin-bottom: 4px;
+    color: #212121;
+}
+
+.house img {
+    height: 198px;
+    width: 265px;
+}
+
+.recommend li {
+    background: #FFFFFF;
+}
+
+.description {
+    font-size: 14px;
+    color: #8A8A8A;
+    letter-spacing: 0;
+}
+
+.recommend ul {
+    overflow: hidden;
+}
+
+.house {
+    float: left;
+    margin: 0 20px 56px 20px;
+}
+
+.house:last-child {
+    margin-right: 0;
+}
+
+.house-description {
+    height: 77px;
+    box-sizing: border-box;
+    font-family: PingFang-SC-Medium;
+    padding: 17px;
+}
+
+.house-description>p span:first-child {
+    font-size: 19px;
+    color: #FF3366;
+    margin-right: 4px;
+}
+
+.house-description>p span:nth-child(2) {
+    font-size: 14px;
+    color: #212121;
+}
+
+.house-description p:nth-child(2) {
+    font-size: 12px;
+    color: #555555;
+    margin-top: 5px;
+}
+
+.box-shadow {
+    -moz-box-shadow: 3px 3px 3px #eee;
+    -webkit-box-shadow: 3px 3px 3px #eee;
+    box-shadow: 3px 3px 3px #eee;
+}
+
+/* 委托流程 */
+
+.icon-arrow-right::after {
+    content: '\e65c';
+    color: #FF3366;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.commissioning-process {
+    /* white-space:nowrap; */
+    height: 198px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/commissioning-process-back.png) no-repeat center center;
+}
+
+.process {
+    font-family: PingFang-SC-Medium;
+    margin-right: 198px;
+}
+
+.process>span {
+    font-size: 24px;
+    color: #212121;
+    letter-spacing: 0;
+}
+
+.process p {
+    font-size: 14px;
+    color: #555555;
+    letter-spacing: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.process p span:first-child {
+    margin-right: 30px;
+}
+
+.commissioning-btn {
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    background-color: #FF3366;
+    border-radius: 5px;
+    padding: 12px 44px;
+}
+
+/* 品牌公寓 */
+
+.band-house {
+    /* white-space:nowrap; */
+    width: 100%;
+    height: 451px;
+    text-align: center;
+    background: #F8F8F8;
+}
+
+.band-house>div {
+    display: inline-block;
+    text-align: left;
+}
+
+.band-house>p {
+    overflow: hidden;
+}
+
+.band-house button {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    border-radius: 2px;
+    padding: 6px 16px;
+    margin-left: 16px;
+    color: #212121;
+    background: #F8F8F8;
+}
+
+button.active-btn {
+    color: #FFFFFF;
+    background: #FF3366;
+}
+
+.band-house h2 {
+    float: left;
+    font-size: 28px;
+    color: #212121;
+    margin-right: 48px;
+}
+
+.band-house-title {
+    overflow: hidden;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.band-house-title span {
+    float: right;
+    cursor: pointer;
+    font-size: 14px;
+    color: #8A8A8A;
+    margin-left: auto;
+}
+
+.band-house-title span:hover {
+    color: #FF3366;
+}
+
+.rect {
+    width: 265px;
+    height: 275px;
+}
+
+.show-list li {
+    float: left;
+    margin-right: 40px;
+}
+
+.show-list li:last-child {
+    margin-right: 0;
+}
+
+/* 品牌公寓介绍 */
+
+.band-house-desp {
+    position: relative;
+    box-sizing: border-box;
+    padding: 24px;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+.band-house-desp h3>strong {
+    font-size: 48px;
+    color: #FF3366;
+}
+
+.band-house-desp h3 {
+    font-size: 20px;
+    color: #0F0F0F;
+    letter-spacing: 0;
+    margin-bottom: 59px;
+}
+
+.band-house-desp>strong {
+    opacity: 0.2;
+    font-family: PingFang-SC-Medium;
+    font-size: 80px;
+    color: #DEDEDE;
+    letter-spacing: 0;
+    position: absolute;
+    top: 32px;
+    left: 60px;
+}
+
+.band-house-desp h4 {
+    font-family: PingFang-SC-Medium;
+    font-size: 18px;
+    color: #212121;
+    letter-spacing: 0;
+}
+
+.band-house-desp p {
+    font-size: 12px;
+    color: #555555;
+}
+
+.band-house .house {
+    margin-left: 0;
+}
+
+/* 服务 */
+
+.service {
+    width: 100%;
+    height: 475px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.service>div {
+    text-align: left;
+    display: inline-block;
+}
+
+.service h4 {
+    font-family: PingFang-SC-Medium;
+    font-size: 18px;
+    color: #212121;
+    margin-bottom: 4px;
+}
+
+.service .section-title {
+    margin-left: 0;
+}
+
+.service-desp {
+    box-sizing: border-box;
+    background: url(../images/service-back.png) no-repeat center center;
+    padding-left: 32px;
+    padding-top: 32px;
+}
+
+.service-desp1 p {
+    font-size: 12px;
+    color: #555555;
+    margin-bottom: 36px;
+}
+
+.service-desp2 li {
+    font-size: 12px;
+    color: #212121;
+    margin-right: 32px;
+}
+
+.service-desp2 ul:first-of-type {
+    margin-top: 42px;
+}
+
+.service-desp2 ul:nth-of-type(2) li {
+    margin-top: 32px;
+}
+
+.service-desp2 button {
+    border: 1px solid #212121;
+    border-radius: 2px;
+    padding: 6px 12px;
+    margin-top: 38px;
+}
+
+.service-desp2 button:hover {
+    background: #FF3366;
+    color: #FFFFFF;
+    border: #FF3366;
+}
+
+/* 社区 */
+
+.community {
+    height: 577px;
+    width: 100%;
+    background: #F8F8F8;
+    text-align: center;
+}
+
+.community>div {
+    display: inline-block;
+    text-align: left;
+}
+
+.community-desp img {
+    height: 276px;
+    width: 570px;
+}
+
+.community-desp {
+    float: left;
+    margin-right: 40px;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+.community-desp>div {
+    box-sizing: border-box;
+    padding: 24px;
+    background: #FFFFFF;
+}
+
+.community-desp h3 {
+    font-family: PingFang-SC-Medium;
+    font-size: 20px;
+    color: #212121;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+
+.community-desp p {
+    font-size: 12px;
+    color: #555555;
+}
+
+/* 4服务 */
+
+.character {
+    height: 257px;
+}
+
+.character .show-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+.character .show-list li {
+    margin-right: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character .show-list li:last-child {
+    margin-right: 0;
+}
+
+.character .show-list h3 {
+    font-size: 20px;
+    color: #212121;
+    letter-spacing: 0;
+}
+
+.character .show-list p {
+    font-size: 14px;
+    color: #8A8A8A;
+    letter-spacing: 0;
+}
+
+/* footer */
+
+footer {
+    box-sizing: border-box;
+    background: #212121;
+    height: 435px;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 48px;
+}
+
+footer>div {
+    display: inline-block;
+    text-align: center;
+}
+
+footer h1 {
+    text-align: left;
+    position: relative;
+    left: 0;
+}
+
+footer>div>div {
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+    display: flex;
+    padding: 24px 0;
+    margin: 24px auto;
+}
+
+footer ul {
+    margin-right: 86px;
+}
+
+footer ul:last-child {
+    margin-right: 0;
+}
+
+footer ul li:first-child {
+    margin-bottom: 40px;
+}
+
+footer li {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.qr-code li {
+    text-align: center;
+}
+
+footer h2 {
+    opacity: 0.3;
+    font-family: PingFang-SC-Medium;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+address {
+    font-size: 12px;
+    color: #8A8A8A;
+}
+
+.phone {
+    font-family: PingFang-SC-Medium;
+    font-size: 24px;
+    color: #FF3366;
+}
