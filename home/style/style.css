@@ -217,8 +217,13 @@ header {
     content: '\e65e';
     color: #FF3366;
 }
-
+.dropdown .icon-arrow-up::after{
+    margin-left: 9px;
+    content: '\e661';
+    color: #FF3366;
+}
 .drop-select {
+    visibility: hidden;
     /* display: none; */
     position: absolute;
     left: 50%;
@@ -248,7 +253,9 @@ header {
     color: #FF3366;
     border-radius: 4px;
 }
-
+.show{
+    visibility: visible;
+}
 /* logo */
 
 header img {
@@ -857,7 +864,7 @@ aside .icon-phone::before {
 .icon-arrow-up{
     cursor: auto;
 }
-.icon-arrow-up::before {
+aside .icon-arrow-up::before {
     display: block;
     content: '\e661';
     /* color: #FF3366; */
