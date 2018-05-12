@@ -14,8 +14,16 @@
         <div class="head-box">
             <img src="./images/logo.jpg">
             <div class="dropdown">
-                <span>杭州</span>
-                <span class="iconfont icon-arrow-down"></span>
+                <div>
+                    <span>杭州</span>
+                    <span class="iconfont icon-arrow-down"></span>
+                </div>
+                <ul class="drop-select">
+                    <li class="active-selected">杭州</li>
+                    <li>上海</li>
+                    <li>南京</li>
+                    <li>江苏</li>
+                </ul>
             </div>
             <nav>
                 <a class="active">首页</a>
@@ -29,14 +37,25 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="carousel">
         </div>
         <div class="search">
             <form>
                 <input type="text" placeholder="输入区域、小区名">
-                <button>马上找房</button>
+                <ul class="drop-select">
+                        <li class="active-selected">热门搜索</li>
+                        <li>萧山北干</li>
+                        <li>下沙</li>
+                        <li>滨江</li>
+                        <li>西溪北苑</li>
+                        <li>寰宇天下</li>
+                        <li>朝晖</li>
+                    </ul>
             </form>
+            <button class="red-btn">马上找房</button>
+            
             <ul>
                 <li>
                     <a href="#">萧山北干</a>
@@ -64,8 +83,8 @@
                         <span>查看更多</span>
                     </div>
                 </div>
-                <ul>
-                    <li class="house box-shadow">
+                <ul class="show-list">
+                    <li class="house  box-shadow box-hover">
                         <img src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web">
                         <div class="house-description">
                             <p>
@@ -75,7 +94,7 @@
                             <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
-                    <li class="house box-shadow show-list">
+                    <li class="house box-shadow box-hover">
                         <img src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web">
                         <div class="house-description">
                             <p>
@@ -85,7 +104,7 @@
                             <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
-                    <li class="house box-shadow">
+                    <li class="house box-shadow box-hover">
                         <img src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web">
                         <div class="house-description">
                             <p>
@@ -95,7 +114,7 @@
                             <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
-                    <li class="house box-shadow">
+                    <li class="house box-shadow box-hover">
                         <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
                         <div class="house-description">
                             <p>
@@ -121,19 +140,19 @@
                     <span></span>
                 </p>
             </div>
-            <button class="commissioning-btn">立即委托</button>
+            <button class="commissioning-btn red-btn">立即委托</button>
         </div>
         <div class="band-house">
             <div>
                 <div class="band-house-title">
                     <h2>品牌公寓</h2>
-                    <button class="active-btn">偶寓</button>
+                    <button class="active-btn red-btn">偶寓</button>
                     <button>随寓</button>
                     <button>集寓</button>
                     <span>查看更多</span>
                 </div>
                 <ul class="band-house-show show-list">
-                    <li class="band-house-desp rect box-shadow">
+                    <li class="band-house-desp rect box-shadow  box-hover">
                         <h3>
                             <strong>偶</strong>寓</h3>
                         <strong>OUYU</strong>
@@ -143,7 +162,7 @@
                     <li>
                         <img class="house-img box-shadow" src="./images/house_img.png">
                     </li>
-                    <li class="house box-shadow">
+                    <li class="house box-shadow box-hover">
                         <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
                         <div class="house-description">
                             <p>
@@ -258,11 +277,22 @@
             </ul>
         </div>
         <aside>
-            <div class="ques-btn">
+            <div class="ques-btn red-btn">
                 <div class="iconfont icon-message"></div>立即咨询</div>
             <div class="quick-btn">
-                <a class="iconfont icon-user"></a>
-                <a class="iconfont icon-phone"></a>
+                <a class="iconfont icon-user">
+                    <div class="sidebar-show">
+                        <p>业主委托</p>
+                        <i class="triangle"></i>
+                    </div>
+                </a>
+                <a class="iconfont icon-phone">
+                    <div class="sidebar-show">
+                            <img src="./images/wecat.svg">
+                            <p>爱上租APP</p>
+                        <i class="triangle"></i>
+                    </div>
+                </a>
                 <a class="iconfont icon-arrow-up"></a>
             </div>
         </aside>
@@ -352,6 +382,7 @@
             <address>© Hangzhou ishangzu Technology Co.,Ltd. All rights reserved.备案号：浙ICP备15007224号-2浙公网安备 33010802006107号</address>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
