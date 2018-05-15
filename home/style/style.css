@@ -19,7 +19,7 @@
     content: "\e69c";
 }
 
-header .icon-phone::before {
+.header .icon-phone::before {
     margin-right: 16px;
 }
 
@@ -39,7 +39,7 @@ a:hover {
     color: #FF3366;
 }
 
-main {
+.main {
     min-width: 1300px;
     display: flex;
     flex-direction: column;
@@ -49,7 +49,7 @@ main {
 
 /* header */
 
-header {
+.header {
     display: flex;
     min-width: 1300px;
     /* width: 100%; */
@@ -66,7 +66,7 @@ header {
 
 /* 下拉 */
 
-.dropdown>div {
+.drop-down-select {
     border: 1px solid hsla(0, 0%, 59%, .2);
     border-radius: 4px;
     cursor: pointer;
@@ -126,41 +126,38 @@ header {
     border-radius: 4px;
 }
 
-.show {
-    visibility: visible;
-    display: block;
-}
+
 
 /* logo */
 
-header img {
+.header .logo {
     height: 24px;
 }
 
 /* 导航 */
 
-header .nav {
+.header .nav {
     margin-left: 258px;
     font-size: 16px;
     line-height: 22px;
 }
 
-header .nav li {
+.header .nav li {
     float: left;
 }
 
-header .nav a {
+.header .nav a {
     color: #555555;
     margin-right: 48px;
 }
 
-header .nav a:hover,
-header .nav a:visited,
-header .nav a:focus {
+.header .nav a:hover,
+.header .nav a:visited,
+.header .nav a:focus {
     color: #FF3366;
 }
 
-.nav li a.active {
+.nav a.active {
     color: #FF3366;
 }
 
@@ -263,7 +260,7 @@ header .nav a:focus {
     align-items: center;
 }
 
-.search form {
+.search-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,7 +268,7 @@ header .nav a:focus {
     position: relative;
 }
 
-.search input {
+.search-input {
     box-sizing: border-box;
     width: 611px;
     height: 44px;
@@ -296,40 +293,35 @@ header .nav a:focus {
     height: auto;
 }
 
-/* .icon-location::after{
-    content: '\e600';
-    color: #8A8A8A;
-} */
-
-.search button {
+.search-button {
     height: 44px;
     width: 120px;
     border-radius: 0 5px 5px 0;
     font-size: 18px;
 }
 
-.search .drop-select {
+.search-drop-select {
     text-align: left;
     top: 44px;
+    box-sizing: border-box;
 }
 
-.search .drop-select li {
-    float: none;
+.search-drop-select  li {
     height: 40px;
     line-height: 40px;
     margin-left: 0;
     width: 611px;
     padding-left: 14px;
     box-sizing: border-box;
+    float: left;
 }
 
 /* link */
 
-.search ul li {
+.search-link li{
     float: left;
     margin-left: 16px;
 }
-
 .search a {
     font-size: 14px;
     color: #212121;
@@ -350,7 +342,7 @@ header .nav a:focus {
     text-align: center;
 }
 
-.recommend>div {
+.center-con {
     display: inline-block;
     text-align: left;
 }
@@ -362,23 +354,24 @@ header .nav a:focus {
     margin-bottom: 32px;
 }
 
-.section-title a {
+.more{
     float: right;
     cursor: pointer;
     margin-left: auto;
     color:#8A8A8A;
+    font-size: 14px;
 }
-.section-title a:hover{
+.more:hover{
     color: #f36;
 }
 
-.section-title h2 {
+.section-title-h2 {
     font-size: 28px;
     margin-bottom: 4px;
     color: #212121;
 }
 
-.house img {
+.house-img {
     height: 198px;
     width: 265px;
 }
@@ -400,18 +393,18 @@ header .nav a:focus {
     padding: 17px;
 }
 
-.house-description>p span:first-child {
+.house-price {
     font-size: 19px;
     color: #FF3366;
     margin-right: 4px;
 }
 
-.house-description>p span:nth-child(2) {
+.house-name {
     font-size: 14px;
     color: #212121;
 }
 
-.house-description p:nth-child(2) {
+.house-introduce {
     font-size: 12px;
     color: #555555;
     margin-top: 5px;
@@ -453,7 +446,7 @@ header .nav a:focus {
     letter-spacing: 0;
 }
 
-.process p {
+.process-des {
     font-size: 14px;
     color: #555555;
     letter-spacing: 0;
@@ -461,7 +454,7 @@ header .nav a:focus {
     margin-left: 10px;
 }
 
-.process p span:first-child {
+.process-des span:first-child {
     margin-right: 30px;
 }
 
@@ -482,16 +475,12 @@ header .nav a:focus {
     background: #F8F8F8;
 }
 
-.band-house>div {
+.center-con {
     display: inline-block;
     text-align: left;
 }
 
-.band-house>p {
-    overflow: hidden;
-}
-
-.band-house button {
+.band-house-btn {
     font-size: 14px;
     letter-spacing: 0.6px;
     border-radius: 2px;
@@ -501,22 +490,22 @@ header .nav a:focus {
     background: #F8F8F8;
 }
 
-.band-house button:hover {
+.band-house-btn:hover {
     color: #FFFFFF;
     background: #FF3366;
 }
 
-button.active-btn {
+.band-house-btn.active-btn {
     color: #FFFFFF;
     background: #FF3366;
 }
 
-.band-house h2 {
+/* .band-house h2 {
     float: left;
     font-size: 28px;
     color: #212121;
     margin-right: 48px;
-}
+} */
 
 .band-house-title {
     overflow: hidden;
@@ -526,7 +515,7 @@ button.active-btn {
     align-items: center;
 }
 
-.band-house-title a {
+/* .band-house-title a {
     float: right;
     cursor: pointer;
     font-size: 14px;
@@ -535,7 +524,7 @@ button.active-btn {
 }
 .band-house-title a:hover{
     color: #f36;
-}
+} */
 
 .rect {
     width: 265px;
@@ -561,19 +550,19 @@ button.active-btn {
     background: #FFFFFF;
 }
 
-.band-house-desp h3>strong {
+.title-strong {
     font-size: 48px;
     color: #FF3366;
 }
 
-.band-house-desp h3 {
+.band-house-big-title {
     font-size: 20px;
     color: #0F0F0F;
     letter-spacing: 0;
     margin-bottom: 59px;
 }
 
-.band-house-desp>strong {
+.band-house-dec {
     opacity: 0.2;
     font-family: PingFang-SC-Medium;
     font-size: 80px;
@@ -584,14 +573,14 @@ button.active-btn {
     left: 60px;
 }
 
-.band-house-desp h4 {
+.band-house-s-title{
     font-family: PingFang-SC-Medium;
     font-size: 18px;
     color: #212121;
     letter-spacing: 0;
 }
 
-.band-house-desp p {
+.band-house-intro {
     font-size: 12px;
     color: #555555;
 }
@@ -609,12 +598,12 @@ button.active-btn {
     text-align: center;
 }
 
-.service>div {
+.center-con {
     text-align: left;
     display: inline-block;
 }
 
-.service h4 {
+.service-content-title {
     font-family: PingFang-SC-Medium;
     font-size: 18px;
     color: #212121;
@@ -632,7 +621,7 @@ button.active-btn {
     padding-top: 32px;
 }
 
-.service-desp1 p {
+.service-desp1-p {
     font-size: 12px;
     color: #555555;
     margin-bottom: 36px;
@@ -644,22 +633,22 @@ button.active-btn {
     margin-right: 32px;
 }
 
-.service-desp2 ul:first-of-type {
+.service-desp2-ul1{
     margin-top: 42px;
 }
 
-.service-desp2 ul:nth-of-type(2) li {
+.service-desp2-ul2 li {
     margin-top: 32px;
 }
 
-.service-desp2 button {
+.more-btn{
     border: 1px solid #212121;
     border-radius: 2px;
     padding: 6px 12px;
     margin-top: 38px;
 }
 
-.service-desp2 button:hover {
+.more-btn:hover {
     background: #FF3366;
     color: #FFFFFF;
     border: 1px solid #FF3366;
@@ -674,12 +663,8 @@ button.active-btn {
     text-align: center;
 }
 
-.community>div {
-    display: inline-block;
-    text-align: left;
-}
 
-.community-desp img {
+.community-desp-img {
     height: 276px;
     width: 570px;
 }
@@ -688,18 +673,18 @@ button.active-btn {
     float: left;
     margin-right: 40px;
 }
-
+/* 
 ul li:last-child {
     margin-right: 0;
-}
+} */
 
-.community-desp>div {
+.community-desp-content {
     box-sizing: border-box;
     padding: 24px;
     background: #FFFFFF;
 }
 
-.community-desp h3 {
+.community-desp-h3 {
     font-family: PingFang-SC-Medium;
     font-size: 20px;
     color: #212121;
@@ -707,7 +692,7 @@ ul li:last-child {
     margin-bottom: 8px;
 }
 
-.community-desp p {
+.community-desp-p {
     font-size: 12px;
     color: #555555;
 }
@@ -736,13 +721,13 @@ ul li:last-child {
     margin-right: 0;
 }
 
-.character .show-list h3 {
+.character-h3 {
     font-size: 20px;
     color: #212121;
     letter-spacing: 0;
 }
 
-.character .show-list p {
+.character-p {
     font-size: 14px;
     color: #8A8A8A;
     letter-spacing: 0;
@@ -750,7 +735,7 @@ ul li:last-child {
 
 /* footer */
 
-footer {
+.footer {
     box-sizing: border-box;
     background: #212121;
     height: 435px;
@@ -761,21 +746,20 @@ footer {
     padding: 48px;
     min-width: 1300px;
 }
-footer a{
+.footer a{
     color:#FFFFFF;
 }
-footer>div {
-    display: inline-block;
-    text-align: center;
+.footer a:hover{
+    color:#FF3366;
 }
 
-footer h1 {
+.footer-title {
     text-align: left;
     position: relative;
     left: 0;
 }
 
-footer>div>div {
+.footer .footer-con {
     border-top: 1px solid #555555;
     border-bottom: 1px solid #555555;
     display: flex;
@@ -783,19 +767,19 @@ footer>div>div {
     margin: 24px auto;
 }
 
-footer ul {
+.footer-ul {
     margin-right: 86px;
 }
 
-footer ul:last-child {
+.footer-ul:last-child {
     margin-right: 0;
 }
 
-footer ul li:first-child {
+.footer-ul li:first-child {
     margin-bottom: 40px;
 }
 
-footer li {
+.footer li {
     margin-bottom: 16px;
     text-align: left;
 }
@@ -804,16 +788,17 @@ footer li {
     text-align: center;
 }
 
-footer h2 {
+.footer-h2 {
     opacity: 0.3;
     font-family: PingFang-SC-Medium;
     font-size: 18px;
     color: #FFFFFF;
 }
 
-address {
+.address {
     font-size: 12px;
     color: #8A8A8A;
+    text-align: center;
 }
 
 .phone a{
@@ -824,7 +809,7 @@ address {
 
 /* sidebar */
 
-aside {
+.aside {
     min-height: 500px;
     position: fixed;
     right: 0;
@@ -863,7 +848,7 @@ aside {
     color: #fff;
 }
 
-aside .icon-arrow-up::before {
+.aside .icon-arrow-up::before {
     content: '\e661';
 }
 
@@ -898,7 +883,7 @@ aside .icon-arrow-up::before {
 }
 
 .icon-user:hover,
-aside .icon-phone:hover,
+.aside .icon-phone:hover,
 .icon-arrow-up:hover {
     background: #FF3366;
     color: #FFFFFF;
@@ -984,6 +969,8 @@ aside .icon-phone:hover,
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
+    /* css3 GPU 加速 */
+    transform: translateZ(0);
 }
 
 .slow-show {
@@ -1021,14 +1008,14 @@ aside .icon-phone:hover,
     position: relative;
 }
 
-.slideshow .car-arrow span {
+.slide-prev.iconfont {
     height: 40px;
     width: 40px;
     font-size: 24px;
     text-align: center;
 }
 
-.slideshow .car-arrow span:hover {
+.slide-prev.iconfont:hover {
     color: #FFFFFF;
 }
 
@@ -1073,6 +1060,10 @@ aside .icon-phone:hover,
     right: 50px;
 }
 
-.all ol li.current {
+.current {
     content: '\e608'
+}
+.show {
+    visibility: visible;
+    display: block;
 }

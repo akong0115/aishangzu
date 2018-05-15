@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="head-box">
-            <img src="./images/logo.jpg" alt="logo">
-            <div class="dropdown">
-                <div id="drop-down-select">
+    <header class="header">
+        <section class="head-box">
+            <img src="./images/logo.jpg" alt="logo" class="logo">
+            <article class="dropdown">
+                <div id="drop-down-select" class="drop-down-select">
                     <span>杭州</span>
                     <span class="iconfont icon-arrow-down"></span>
                 </div>
@@ -23,16 +23,32 @@
                     <li>南京</li>
                     <li>江苏</li>
                 </ul>
-            </div>
+            </article>
             <ul class="nav">
-                <li><a href="javascript:;" class="active">首页</a></li>
-                <li><a href="javascript:;">我要租房</a></li>
-                <li><a href="javascript:;">业主委托</a></li>
-                <li><a href="javascript:;">服务</a></li>
-                <li><a href="javascript:;">社区</a></li>
-                <li><a href="javascript:;">我们</a></li>
-                <li><a href="javascript:;">地图找房</a></li>
-                <li><a href="javascript:;" class="iconfont icon-phone">APP下载</a></li>
+                <li>
+                    <a href="javascript:;" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">我要租房</a>
+                </li>
+                <li>
+                    <a href="javascript:;">业主委托</a>
+                </li>
+                <li>
+                    <a href="javascript:;">服务</a>
+                </li>
+                <li>
+                    <a href="javascript:;">社区</a>
+                </li>
+                <li>
+                    <a href="javascript:;">我们</a>
+                </li>
+                <li>
+                    <a href="javascript:;">地图找房</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="iconfont icon-phone">APP下载</a>
+                </li>
             </ul>
             <!-- <nav>
                 <a href="javascript:;" class="active">首页</a>
@@ -44,10 +60,10 @@
                 <a href="javascript:;">地图找房</a>
                 <a href="javascript:;" class="iconfont icon-phone">APP下载</a>
             </nav> -->
-        </div>
+        </section>
     </header>
-    <main>
-        <div class="carousel">
+    <main class="main">
+        <article class="carousel">
             <ul class="carousel-img" id="carousel-img">
                 <li class="display-show"></li>
                 <li class="display-none"></li>
@@ -64,11 +80,11 @@
                 <li class="iconfont">&#xe608</li>
                 <li class="iconfont">&#xe608</li>
             </ul>
-        </div>
-        <div class="search" id="search">
-            <form>
-                <input type="text" placeholder="输入区域、小区名" id="area-input">
-                <ul class="drop-select" id="area-select">
+        </article>
+        <article class="search" id="search">
+            <form class="search-form">
+                <input type="text" placeholder="输入区域、小区名" id="area-input" class="search-input">
+                <ul class="drop-select search-drop-select" id="area-select">
                     <li class="active-selected">热门搜索</li>
                     <li>萧山北干</li>
                     <li>下沙</li>
@@ -78,80 +94,80 @@
                     <li>朝晖</li>
                 </ul>
             </form>
-            <button type="button" class="red-btn">马上找房</button>
+            <button type="button" class="red-btn search-button">马上找房</button>
 
-            <ul>
+            <ul class="search-link">
                 <li>
                     <a href="javascript:;">萧山北干</a>
                 </li>
                 <li>
-                    <a href="javascript:;" >滨江区海创园</a>
+                    <a href="javascript:;">滨江区海创园</a>
                 </li>
                 <li>
-                    <a href="javascript:;" >西溪北苑小区</a>
+                    <a href="javascript:;">西溪北苑小区</a>
                 </li>
                 <li>
-                    <a href="javascript:;" >寰宇天下</a>
+                    <a href="javascript:;">寰宇天下</a>
                 </li>
                 <li>
-                    <a href="javascript:;" >汽车东站</a>
+                    <a href="javascript:;">汽车东站</a>
                 </li>
             </ul>
-        </div>
-        <div class="recommend">
-            <div>
+        </article>
+        <article class="recommend">
+            <div class="center-con">
                 <div class="section-title">
-                    <h2>推荐房源</h2>
+                    <h2 class="section-title-h2">推荐房源</h2>
                     <div class="description">
                         <span>精选优质房源，经过严格审核，实拍房源照片，居住安全可靠</span>
-                        <a href="javascript:;">查看更多</a>
+                        <a href="javascript:;" class="more">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
-                    <li class="house  box-shadow box-hover">
-                        <img src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                    <li class="house box-shadow box-hover">
+                        <img class="house-img" src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="commissioning-process">
+        </article>
+        <article class="commissioning-process">
             <div class="process">
                 <span>【 委托流程 】 </span>
                 <span class="iconfont icon-arrow-right">发起委托</span>
@@ -159,42 +175,43 @@
                 <span class="iconfont icon-arrow-right">完成签约</span>
                 <span class="iconfont icon-arrow-right">设计改造</span>
                 <span>坐享收益</span>
-                <p>
+                <p class="process-des">
                     <span>“业主房源委托”</span>做个省心省力，省时省事的安心房东
                     <span></span>
                 </p>
             </div>
             <button type="button" class="commissioning-btn red-btn">立即委托</button>
-        </div>
-        <div class="band-house">
-            <div>
+        </article>
+        <article class="band-house">
+            <div class="center-con">
                 <div class="band-house-title" id="band-house-btns">
-                    <h2>品牌公寓</h2>
-                    <button type="button" class="active-btn">偶寓</button>
-                    <button type="button">随寓</button>
-                    <button type="button">集寓</button>
-                    <a href="javascript:;">查看更多</a>
+                    <h2 class="section-title-h2">品牌公寓</h2>
+                    <button class="band-house-btn active-btn" type="button">偶寓</button>
+                    <button class="band-house-btn" type="button">随寓</button>
+                    <button class="band-house-btn" type="button">集寓</button>
+                    <a href="javascript:;" class="more">查看更多</a>
                 </div>
                 <ul class="band-house-show show-list display-show">
                     <li class="band-house-desp rect box-shadow  box-hover">
-                        <h3>
-                            <strong>偶</strong>寓</h3>
-                        <strong>OUYU</strong>
-                        <h4>有故事的合租公寓</h4>
-                        <p>偶寓，是爱上租为广大青年租客设计推出的精装合租公寓，富有个性的装修风格，数次产品迭代升级，为租客用心打造温馨，舒适的居住环境。</p>
+                        <h3 class="band-house-big-title">
+                            <strong class="title-strong">偶</strong>寓
+                        </h3>
+                        <strong class="band-house-dec">OUYU</strong>
+                        <h4 class="band-house-s-title">有故事的合租公寓</h4>
+                        <p class="band-house-intro">偶寓，是爱上租为广大青年租客设计推出的精装合租公寓，富有个性的装修风格，数次产品迭代升级，为租客用心打造温馨，舒适的居住环境。</p>
                     </li>
                     <li class="all">
                         <!-- <img class="house-img box-shadow" src="./images/house_img.png"> -->
                         <div class="slideshow screen" id="slide-show1">
-                            <ul >
+                            <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/ouyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_2.png" alt="ouyu_2">
+                                    <img class=" box-shadow" src="./images/ouyu_2.png" alt="ouyu_2">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_3.png" alt="ouyu_3">
+                                    <img class="box-shadow" src="./images/ouyu_3.png" alt="ouyu_3">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -207,35 +224,35 @@
                     </li>
 
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                 </ul>
                 <ul class="band-house-show show-list display-none">
                     <li class="band-house-desp rect box-shadow  box-hover">
-                        <h3>
-                            <strong>随</strong>寓</h3>
-                        <strong>OUYU</strong>
-                        <h4>自由温暖的整租公寓</h4>
-                        <p>随寓，是爱上租为城市高端白领精英和家庭打造的专属精装整租公寓，为高端人士、温馨家庭、亲密友人提供自由自在、温暖安心的独立私享空间。</p>
+                        <h3 class="band-house-big-title">
+                            <strong class="title-strong">随</strong>寓</h3>
+                        <strong class="band-house-dec">OUYU</strong>
+                        <h4 class="band-house-s-title">自由温暖的整租公寓</h4>
+                        <p class="band-house-intro">随寓，是爱上租为城市高端白领精英和家庭打造的专属精装整租公寓，为高端人士、温馨家庭、亲密友人提供自由自在、温暖安心的独立私享空间。</p>
                     </li>
                     <li class="all">
                         <div class="slideshow screen" id="slide-show3">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/suiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/suiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/suiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -247,36 +264,36 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                 </ul>
 
                 <ul class="band-house-show show-list display-none">
                     <li class="band-house-desp rect box-shadow  box-hover">
-                        <h3>
-                            <strong>集</strong>寓</h3>
-                        <strong>OUYU</strong>
-                        <h4>文化主题单身公寓</h4>
-                        <p>集寓，是爱上租为当代文艺青年和追求品质生活的都市白领租客设计的主题式精装公寓产品，也是爱上租“集爱上租服务于一体”的360度全方位服务宗旨。</p>
+                        <h3 class="band-house-big-title">
+                            <strong class="title-strong">集</strong>寓</h3>
+                        <strong class="band-house-dec">OUYU</strong>
+                        <h4 class="band-house-s-title">文化主题单身公寓</h4>
+                        <p class="band-house-intro">集寓，是爱上租为当代文艺青年和追求品质生活的都市白领租客设计的主题式精装公寓产品，也是爱上租“集爱上租服务于一体”的360度全方位服务宗旨。</p>
                     </li>
                     <li class="all">
                         <div class="slideshow screen" id="slide-show2">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -288,27 +305,27 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
-                                <span>3600元/月</span>
-                                <span>望江新园二园</span>
+                                <span class="house-price">3600元/月</span>
+                                <span class="house-name">望江新园二园</span>
                             </p>
-                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                            <p class="house-introduce">8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
                         </div>
                     </li>
                 </ul>
 
             </div>
-        </div>
+        </article>
 
-        <div class="service">
-            <div>
+        <article class="service">
+            <div class="center-con">
                 <div class="section-title">
-                    <h2>爱上租服务</h2>
+                    <h2 class="section-title-h2">爱上租服务</h2>
                     <div class="description">
                         <span>为您提供全方位管家式的优质服务，找房、入住、租后统统交给贴心管家，让生活简单有趣</span>
-                        <a href="javascript:;">查看更多</a>
+                        <a href="javascript:;" class="more">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
@@ -316,13 +333,13 @@
                         <div class="slideshow screen">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -334,16 +351,16 @@
                         </div>
                     </li>
                     <li class="rect box-shadow service-desp service-desp1">
-                        <h4>选房</h4>
-                        <p>一键呼叫管家，在线选房，即时看房</p>
-                        <h4>签约</h4>
-                        <p>线上签约合同，电子签约，在线交租</p>
-                        <h4>租后</h4>
-                        <p>贴心管家服务，双周保洁，上门维修</p>
+                        <h4 class="service-content-title">选房</h4>
+                        <p class="service-desp1-p">一键呼叫管家，在线选房，即时看房</p>
+                        <h4 class="service-content-title">签约</h4>
+                        <p class="service-desp1-p">线上签约合同，电子签约，在线交租</p>
+                        <h4 class="service-content-title">租后</h4>
+                        <p class="service-desp1-p">贴心管家服务，双周保洁，上门维修</p>
                     </li>
                     <li class="rect box-shadow service-desp service-desp2">
                         <h4>自助服务</h4>
-                        <ul>
+                        <ul class="service-desp2-ul1">
                             <li>
                                 <a href="javascript:;">自助服务</a>
                             </li>
@@ -354,7 +371,7 @@
                                 <a href="javascript:;">解约流程</a>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="service-desp2-ul2">
                             <li>
                                 <a href="javascript:;">入住须知</a>
                             </li>
@@ -365,63 +382,63 @@
                                 <a href="javascript:;">智能锁项</a>
                             </li>
                         </ul>
-                        <button type="button">了解更多</button>
+                        <button type="button" class="more-btn">了解更多</button>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="community">
-            <div>
+        </article>
+        <article class="community">
+            <div class="center-con">
                 <div class="section-title">
-                    <h2>爱上租社区</h2>
+                    <h2 class="section-title-h2">爱上租社区</h2>
                     <div class="description">
                         <span>找到你的租客部落，加入你的兴趣社群，赶走无聊生活，一起造趣</span>
-                        <a href="javascript:;">查看更多</a>
+                        <a href="javascript:;" class="more">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
                     <li class="box-shadow community-desp">
-                        <img src="./images/community1.png" alt="community1">
-                        <div>
-                            <h3>爱上租理想家计划VOL.2</h3>
-                            <p>她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
+                        <img src="./images/community1.png" alt="community1" class="community-desp-img">
+                        <div class="community-desp-content">
+                            <h3 class="community-desp-h3 ">爱上租理想家计划VOL.2</h3>
+                            <p class="community-desp-p">她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
                         </div>
                     </li>
                     <li class="box-shadow community-desp">
-                        <img src="./images/community2.png" alt="community2">
-                        <div>
-                            <h3>我所有的美好都源自于我的女朋友</h3>
-                            <p>她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
+                        <img src="./images/community2.png" alt="community2" class="community-desp-img">
+                        <div class="community-desp-content">
+                            <h3 class="community-desp-h3">我所有的美好都源自于我的女朋友</h3>
+                            <p class="community-desp-p">她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
                         </div>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="character">
+        </article>
+        <article class="character">
             <ul class="show-list">
                 <li>
                     <img src="./images/service-manager.png" alt="服务管家">
-                    <h3>服务管家</h3>
-                    <p>专属管家，服务贴心到位</p>
+                    <h3 class="character-h3">服务管家</h3>
+                    <p class="character-p">专属管家，服务贴心到位</p>
                 </li>
                 <li>
                     <img src="./images/structure.png" alt="智能门锁">
-                    <h3>智能门锁</h3>
-                    <p>一客一锁，居住安全便利</p>
+                    <h3 class="character-h3">智能门锁</h3>
+                    <p class="character-p">一客一锁，居住安全便利</p>
                 </li>
                 <li>
                     <img src="./images/minute-phase.png" alt="金融分期">
-                    <h3>金融分期</h3>
-                    <p>月付房租，资金轻松灵活</p>
+                    <h3 class="character-h3">金融分期</h3>
+                    <p class="character-p">月付房租，资金轻松灵活</p>
                 </li>
                 <li>
                     <img src="./images/authentication.png" alt="租客认证">
-                    <h3>租客认证</h3>
-                    <p>实名建档，身份真实可靠</p>
+                    <h3 class="character-h3">租客认证</h3>
+                    <p class="character-p">实名建档，身份真实可靠</p>
                 </li>
             </ul>
-        </div>
-        <aside>
+        </article>
+        <aside class="aside">
             <div class="ques-btn red-btn">
                 <div class="iconfont icon-message"></div>立即咨询</div>
             <div class="quick-btn">
@@ -450,13 +467,13 @@
             </div>
         </aside>
     </main>
-    <footer>
-        <div>
-            <h1>杭州租房</h1>
-            <div>
-                <ul>
+    <footer class="footer">
+        <section class="center-con">
+            <h1 class="footer-title">杭州租房</h1>
+            <article class="footer-con">
+                <ul class="footer-ul">
                     <li>
-                        <h2>关于爱上租</h2>
+                        <h2 class="footer-h2">关于爱上租</h2>
                     </li>
                     <li>
                         <a href="javascript:;">公司简介</a>
@@ -471,9 +488,9 @@
                         <a href="javascript:;">加入我们</a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="footer-ul">
                     <li>
-                        <h2>爱上租社区</h2>
+                        <h2 class="footer-h2">爱上租社区</h2>
                     </li>
                     <li>
                         <a href="javascript:;">租客活动</a>
@@ -488,9 +505,9 @@
                         <a href="javascript:;">新鲜资讯</a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="footer-ul">
                     <li>
-                        <h2>使用帮助</h2>
+                        <h2 class="footer-h2">使用帮助</h2>
                     </li>
                     <li>
                         <a href="javascript:;">业主入驻</a>
@@ -502,18 +519,18 @@
                         <a href="javascript:;">网站地图</a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="footer-ul">
                     <li>
-                        <h2>官方客服</h2>
+                        <h2 class="footer-h2">官方客服</h2>
                     </li>
-                    <li  class="phone">
-                        <a  href="tel:400-018-2323" >400-018-2323</a>
+                    <li class="phone">
+                        <a href="tel:400-018-2323">400-018-2323</a>
                     </li>
                     <li>
                         周一至周日 9:00－22:00
                     </li>
                 </ul>
-                <ul class="qr-code">
+                <ul class="qr-code footer-ul">
                     <li>
                         <img src="./images/wecat.svg" alt="APP二维码">
                     </li>
@@ -522,7 +539,7 @@
                     </li>
 
                 </ul>
-                <ul class="qr-code">
+                <ul class="qr-code footer-ul">
                     <li>
                         <img src="./images/wecat.svg" alt="公众号二维码">
                     </li>
@@ -531,9 +548,9 @@
                     </li>
 
                 </ul>
-            </div>
-            <address>© Hangzhou ishangzu Technology Co.,Ltd. All rights reserved.备案号：浙ICP备15007224号-2浙公网安备 33010802006107号</address>
-        </div>
+            </article>
+            <address class="address">© Hangzhou ishangzu Technology Co.,Ltd. All rights reserved.备案号：浙ICP备15007224号-2浙公网安备 33010802006107号</address>
+        </section>
     </footer>
     <script src="./js/index.js"></script>
 </body>

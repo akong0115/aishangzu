@@ -29,8 +29,8 @@ window.onload = function (e) {
   // 搜索
   function areaSeltctShow(event) {
     event.stopPropagation();
-    if (this.parentElement.children[1].className === 'drop-select') {
-      this.parentElement.children[1].className = 'drop-select show';
+    if (this.parentElement.children[1].className === 'drop-select search-drop-select') {
+      this.parentElement.children[1].className = 'drop-select search-drop-select show';
       for (let i = 0; i < this.parentElement.children[1].childElementCount; i++) {
         this.parentElement.children[1].children[i].onclick = function (e) {
           // console.log(this.parentElement.parentElement.children[0]);
@@ -38,18 +38,18 @@ window.onload = function (e) {
         }
       }
     } else {
-      this.parentElement.children[1].className = 'drop-select';
+      this.parentElement.children[1].className = 'drop-select search-drop-select';
     }
   }
   document.getElementById('area-input').onmouseover = areaSeltctShow;
   document.getElementById('area-input').onmouseout = areaSeltctShow;
   document.getElementById('area-select').onmouseover = function (e) {
     event.stopPropagation();
-    this.parentElement.children[1].className = 'drop-select show';
+    this.parentElement.children[1].className = 'drop-select search-drop-select show';
   }
   document.getElementById('area-select').onmouseout = function (e) {
     event.stopPropagation();
-    this.parentElement.children[1].className = 'drop-select';
+    this.parentElement.children[1].className = 'drop-select search-drop-select';
   }
 }
 // 侧边栏
@@ -124,9 +124,9 @@ for (let i = 1; i < 4; i++) {
     }, 1000);
     console.log(this.parentElement);
     for (let j = 1; j < 4; j++) {
-      this.parentElement.children[j].className = '';
+      this.parentElement.children[j].className = 'band-house-btn';
     }
-    this.className = 'active-btn';
+    this.className = 'band-house-btn active-btn';
     for (let j = 1; j < 4; j++) {
       this.parentElement.parentElement.children[j].className = 'band-house-show show-list display-none';
     }
@@ -325,7 +325,11 @@ function animate(el, target) {
   }, 15);
 }
 //1. 找对象
+// class SlideElement{
+//   constructor(num){
 
+//   }
+// }
 var box = document.getElementsByClassName("all");
 var slideshow = document.getElementsByClassName("slideshow")[0];
 var ul;
