@@ -37,25 +37,40 @@
             </nav>
         </div>
     </header>
-
     <main>
         <div class="carousel">
+            <ul class="carousel-img" id="carousel-img">
+                <li class="display-show"></li>
+                <li class="display-none"></li>
+                <li class="display-none"></li>
+                <li class="display-none"></li>
+            </ul>
+            <div class="car-arrow">
+                <span class="prev iconfont" id="top-prev-btn">&#xe69d</span>
+                <span class="next iconfont" id="top-next-btn">&#xe64a</span>
+            </div>
+            <ul class="img-dot" id="img-dot">
+                <li class="iconfont active-dot">&#xe608</li>
+                <li class="iconfont">&#xe608</li>
+                <li class="iconfont">&#xe608</li>
+                <li class="iconfont">&#xe608</li>
+            </ul>
         </div>
-        <div class="search">
+        <div class="search " id="search">
             <form>
                 <input type="text" placeholder="输入区域、小区名" id="area-input">
                 <ul class="drop-select" id="area-select">
-                        <li class="active-selected">热门搜索</li>
-                        <li>萧山北干</li>
-                        <li>下沙</li>
-                        <li>滨江</li>
-                        <li>西溪北苑</li>
-                        <li>寰宇天下</li>
-                        <li>朝晖</li>
-                    </ul>
+                    <li class="active-selected">热门搜索</li>
+                    <li>萧山北干</li>
+                    <li>下沙</li>
+                    <li>滨江</li>
+                    <li>西溪北苑</li>
+                    <li>寰宇天下</li>
+                    <li>朝晖</li>
+                </ul>
             </form>
             <button class="red-btn">马上找房</button>
-            
+
             <ul>
                 <li>
                     <a href="#">萧山北干</a>
@@ -144,14 +159,14 @@
         </div>
         <div class="band-house">
             <div>
-                <div class="band-house-title">
+                <div class="band-house-title" id="band-house-btns">
                     <h2>品牌公寓</h2>
-                    <button class="active-btn red-btn">偶寓</button>
+                    <button class="active-btn">偶寓</button>
                     <button>随寓</button>
                     <button>集寓</button>
                     <span>查看更多</span>
                 </div>
-                <ul class="band-house-show show-list">
+                <ul class="band-house-show show-list display-show">
                     <li class="band-house-desp rect box-shadow  box-hover">
                         <h3>
                             <strong>偶</strong>寓</h3>
@@ -160,7 +175,86 @@
                         <p>偶寓，是爱上租为广大青年租客设计推出的精装合租公寓，富有个性的装修风格，数次产品迭代升级，为租客用心打造温馨，舒适的居住环境。</p>
                     </li>
                     <li>
-                        <img class="house-img box-shadow" src="./images/house_img.png">
+                        <!-- <img class="house-img box-shadow" src="./images/house_img.png"> -->
+                        <div class="slideshow" id="slide-show1">
+                            <ul style="left: -570px;">
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/ouyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/ouyu_1.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/ouyu_2.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/ouyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/ouyu_1.png">
+                                </li>
+                            </ul>
+                            <div class="car-arrow">
+                                <span class="slide-prev prev iconfont">&#xe69d</span>
+                                <span class="slide-next next iconfont">&#xe64a</span>
+                            </div>
+                            <ul class="img-dot">
+                                <li class="iconfont active-dot">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                            </ul>
+                        </div>
+
+                    </li>
+
+                    <li class="house box-shadow box-hover">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <div class="house-description">
+                            <p>
+                                <span>3600元/月</span>
+                                <span>望江新园二园</span>
+                            </p>
+                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="band-house-show show-list display-none">
+                    <li class="band-house-desp rect box-shadow  box-hover">
+                        <h3>
+                            <strong>随</strong>寓</h3>
+                        <strong>OUYU</strong>
+                        <h4>自由温暖的整租公寓</h4>
+                        <p>随寓，是爱上租为城市高端白领精英和家庭打造的专属精装整租公寓，为高端人士、温馨家庭、亲密友人提供自由自在、温暖安心的独立私享空间。</p>
+                    </li>
+                    <li>
+                        <div class="slideshow" id="slide-show3">
+                            <ul style="left: -570px;">
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/suiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/suiyu_1.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/suiyu_2.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/suiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/suiyu_1.png">
+                                </li>
+                            </ul>
+                            <div class="car-arrow">
+                                <span class="slide-prev prev iconfont">&#xe69d</span>
+                                <span class="slide-next next iconfont">&#xe64a</span>
+                            </div>
+                            <ul class="img-dot">
+                                <li class="iconfont active-dot">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="house box-shadow box-hover">
                         <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
@@ -173,8 +267,60 @@
                         </div>
                     </li>
                 </ul>
+
+                <ul class="band-house-show show-list display-none">
+                    <li class="band-house-desp rect box-shadow  box-hover">
+                        <h3>
+                            <strong>集</strong>寓</h3>
+                        <strong>OUYU</strong>
+                        <h4>文化主题单身公寓</h4>
+                        <p>集寓，是爱上租为当代文艺青年和追求品质生活的都市白领租客设计的主题式精装公寓产品，也是爱上租“集爱上租服务于一体”的360度全方位服务宗旨。</p>
+                    </li>
+                    <li>
+                        <div class="slideshow" id="slide-show2">
+                            <ul style="left: -570px;">
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_2.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                </li>
+                            </ul>
+                            <div class="car-arrow">
+                                <span class="slide-prev prev iconfont">&#xe69d</span>
+                                <span class="slide-next next iconfont">&#xe64a</span>
+                            </div>
+                            <ul class="img-dot">
+                                <li class="iconfont active-dot">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="house box-shadow box-hover">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <div class="house-description">
+                            <p>
+                                <span>3600元/月</span>
+                                <span>望江新园二园</span>
+                            </p>
+                            <p>8.8平米｜17/22F｜3室合租｜南北｜精装修</p>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
         </div>
+
         <div class="service">
             <div>
                 <div class="section-title">
@@ -186,8 +332,34 @@
                 </div>
                 <ul class="show-list">
                     <li>
-                        <img class="house-img box-shadow" src="./images/house_img.png">
-                    </li>
+                        <div class="slideshow" id="slide-show2">
+                            <ul style="left: -570px;">
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_2.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                </li>
+                                <li>
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                </li>
+                            </ul>
+                            <div class="car-arrow">
+                                <span class="slide-prev prev iconfont">&#xe69d</span>
+                                <span class="slide-next next iconfont">&#xe64a</span>
+                            </div>
+                            <ul class="img-dot">
+                                <li class="iconfont active-dot">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                                <li class="iconfont">&#xe608</li>
+                            </ul>
+                        </div>                    </li>
                     <li class="rect box-shadow service-desp service-desp1">
                         <h4>选房</h4>
                         <p>一键呼叫管家，在线选房，即时看房</p>
@@ -280,20 +452,28 @@
             <div class="ques-btn red-btn">
                 <div class="iconfont icon-message"></div>立即咨询</div>
             <div class="quick-btn">
-                <a class="iconfont icon-user">
-                    <div class="sidebar-show">
-                        <p>业主委托</p>
-                        <i class="triangle"></i>
-                    </div>
-                </a>
-                <a class="iconfont icon-phone">
-                    <div class="sidebar-show">
+                <div>
+                    <a class="iconfont icon-user" id="entrust">
+                        <div class="sidebar-show hide">
+                            <p>业主委托</p>
+                            <i class="triangle"></i>
+                        </div>
+                    </a>
+                    <a class="iconfont icon-phone" id="qr-code">
+                        <div class="sidebar-show hide">
                             <img src="./images/wecat.svg">
                             <p>爱上租APP</p>
+                            <i class="triangle"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="up-btn">
+                    <a class="iconfont icon-arrow-up trans-hide" id="up-to-head"></a>
+                    <div class="sidebar-show hide" id="up-top-show">
+                        <p>返回顶部</p>
                         <i class="triangle"></i>
                     </div>
-                </a>
-                <a class="iconfont icon-arrow-up"></a>
+                </div>
             </div>
         </aside>
     </main>
