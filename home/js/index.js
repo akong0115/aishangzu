@@ -139,6 +139,10 @@ for (let i = 1; i < 4; i++) {
     // slide('slideshow', i-1);
     getEl(i - 1);
     clearInterval(timer);
+    pic = fk = 0;
+    timer = setInterval(function () {
+      rightArrs[i - 1].onclick();
+    }, 1000);
     console.log(this.parentElement);
     for (let j = 1; j < 4; j++) {
       this.parentElement.children[j].className = '';
@@ -343,14 +347,14 @@ function animate(el, target) {
 }
 //1. 找对象
 var box;
-var screen;
+var slideshow=document.getElementsByClassName("slideshow")[0];
 var ul;
 var ullis;
 var ol;
-var arr ;
-var leftArrs = document.getElementsByClassName("prev");
-var rightArrs = document.getElementsByClassName("next");
-var imgwidth = screen.offsetWidth;
+var arr;
+var leftArrs = document.getElementsByClassName("slide-prev");
+var rightArrs = document.getElementsByClassName("slide-next");
+var imgwidth = slideshow.offsetWidth;
 var pic = fk = 0;
 var timer;
 var ollis;
@@ -361,7 +365,8 @@ function getEl(num) {
   ullis = ul.children;
   ol = slideshow.children[1];
   arr = document.getElementsByClassName('slide-arr')[num];
-  imgwidth = slideshow.offsetWidth;
+  console.log(slideshow);
+  console.log(imgwidth);
   pic = fk = 0;
   //2. 动态创建结构
   //2.1 创建小方块,ulLis
@@ -382,7 +387,7 @@ function getEl(num) {
   //3. 简单轮播功能
   //3.1 给小方块注册点击事件
   for (var i = 0; i < ollis.length; i++) {
-    ollis[i].index = i;//存索引
+    ollis[i].index = i; //存索引
     ollis[i].addEventListener("click", function () {
       //3.2 小方块高亮排他
       for (var i = 0; i < ollis.length; i++) {
@@ -401,6 +406,7 @@ function getEl(num) {
     arr.style.display = "block";
     //清除定时器
     clearInterval(timer);
+    clearInterval(timer2);
   }
   //4.2 鼠标离开盒子，隐藏箭头
   box.onmouseleave = function () {
@@ -418,7 +424,7 @@ for (let i = 0; i < rightArrs.length; i++) {
       ul.style.left = 0;
       pic = 0;
     }
-    pic++;//记录出去的图片张数
+    pic++; //记录出去的图片张数
     fk++;
     if (fk === ollis.length) {
       fk = 0;
@@ -457,7 +463,11 @@ getEl(0);
 timer = setInterval(function () {
   rightArrs[0].onclick();
 }, 1000);
-  //6. 同步问题
-  //6.1 点击右箭头,同步
-  //6.2 点击左箭头，同步
-  //6.3 点击小方块，同步
+getEl(3);
+timer2=setInterval(function () {
+  rightArrs[3].onclick();
+}, 1000);;
+//6. 同步问题
+//6.1 点击右箭头,同步
+//6.2 点击左箭头，同步
+//6.3 点击小方块，同步
