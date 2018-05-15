@@ -12,15 +12,9 @@ window.onload = function (e) {
       this.children[1].className = "iconfont icon-arrow-up";
       document.getElementById('city-select').className = 'show drop-select';
       for (let i = 0; i < 4; i++) {
-        // console.log(document.getElementById('city-select').children[i]);
-        // console.log(this);
         document.getElementById('city-select').children[i].onclick = function (e) {
-          // console.log(this);
-          // console.log(this.parentElement.parentElement.children[0].children[0].innerHTML);
           this.parentElement.parentElement.children[0].children[0].innerHTML = this.innerHTML;
-          // console.log(this.parentElement.childElementCount);
           for (let i = 0; i < this.parentElement.childElementCount; i++) {
-            // console.log(this.parentElement.children[i]);
             this.parentElement.children[i].className = '';
           }
           this.className = 'active-selected';
@@ -61,12 +55,10 @@ window.onload = function (e) {
 // 侧边栏
 document.getElementById('entrust').onmousemove = function (e) {
   e.stopPropagation();
-  // console.log(this);
   this.children[0].className = 'sidebar-show';
 }
 document.getElementById('entrust').onmouseout = function (e) {
   e.stopPropagation();
-  // console.log(this);
   this.children[0].className = 'sidebar-show hide';
 
 }
@@ -77,13 +69,11 @@ document.getElementById('qr-code').onmouseover = function (e) {
 }
 document.getElementById('qr-code').onmouseout = function (e) {
   e.stopPropagation();
-  // console.log(this);
   this.children[0].className = 'sidebar-show hide';
 
 }
 // 滚动
 window.onscroll = function (e) {
-  // this.console.log(document.documentElement.scrollTop);
   let t = document.documentElement.scrollTop || document.body.scrollTop;
   if (t > 668) {
     document.getElementById('search').className = 'search search-fixed';
@@ -92,7 +82,6 @@ window.onscroll = function (e) {
 
   }
   if (t > 150) {
-    // console.log(`66`);
     document.getElementById('up-to-head').className = 'trans-hide slow-show iconfont icon-arrow-up';
 
   } else {
@@ -123,20 +112,10 @@ document.getElementById('up-to-head').onclick = function (e) {
   });
   document.getElementById('up-top-show').className = 'sidebar-show hide';
 }
-// console.log(document.getElementById('band-house-btns').children);
 // 品牌按钮
-// let slideShowInterval ;
-// function slide(className, num) {
-//   slideShowInterval= setInterval(function () {
-//     nextImg(className, num);
-//   }, 5000);
-// };
-// slide('slideshow',0);
-// slide('slideshow',3);
 for (let i = 1; i < 4; i++) {
   document.getElementById('band-house-btns').children[i].onclick = function (e) {
     e.stopPropagation();
-    // slide('slideshow', i-1);
     getEl(i - 1);
     clearInterval(timer);
     pic = fk = 0;
@@ -346,8 +325,9 @@ function animate(el, target) {
   }, 15);
 }
 //1. 找对象
-var box;
-var slideshow=document.getElementsByClassName("slideshow")[0];
+
+var box = document.getElementsByClassName("all");
+var slideshow = document.getElementsByClassName("slideshow")[0];
 var ul;
 var ullis;
 var ol;
@@ -358,15 +338,17 @@ var imgwidth = slideshow.offsetWidth;
 var pic = fk = 0;
 var timer;
 var ollis;
+var _num;
+
 function getEl(num) {
-  box = document.getElementsByClassName("all")[num];
+  _num = num;
   slideshow = document.getElementsByClassName("slideshow")[num];
   ul = slideshow.children[0];
   ullis = ul.children;
   ol = slideshow.children[1];
   arr = document.getElementsByClassName('slide-arr')[num];
-  console.log(slideshow);
-  console.log(imgwidth);
+  // leftArrs = document.getElementsByClassName("slide-prev")[num+1];
+  // rightArrs = document.getElementsByClassName("slide-next")[num+1];
   pic = fk = 0;
   //2. 动态创建结构
   //2.1 创建小方块,ulLis
@@ -400,19 +382,21 @@ function getEl(num) {
       pic = fk = this.index;
     })
   }
-  //4. 左右焦点功能（无缝）
-  //4.1 鼠标经过盒子，显示箭头
-  box.onmouseover = function () {
+
+}
+//4. 左右焦点功能（无缝）
+//4.1 鼠标经过盒子，显示箭头
+for (let i = 0; i < box.length; i++) {
+  box[i].onmouseover = function () {
     arr.style.display = "block";
     //清除定时器
     clearInterval(timer);
-    clearInterval(timer2);
   }
   //4.2 鼠标离开盒子，隐藏箭头
-  box.onmouseleave = function () {
+  box[i].onmouseleave = function () {
     arr.style.display = "none";
     timer = setInterval(function () {
-      rightArrs[num + 1].onclick();
+      rightArrs[_num + 1].onclick();
     }, 1000)
   }
 }
@@ -463,10 +447,6 @@ getEl(0);
 timer = setInterval(function () {
   rightArrs[0].onclick();
 }, 1000);
-getEl(3);
-timer2=setInterval(function () {
-  rightArrs[3].onclick();
-}, 1000);;
 //6. 同步问题
 //6.1 点击右箭头,同步
 //6.2 点击左箭头，同步

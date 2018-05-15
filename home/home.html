@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>爱上租</title>
+    <link rel="stylesheet" type="text/css" href="style/reset.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 
 <body>
     <header>
         <div class="head-box">
-            <img src="./images/logo.jpg">
+            <img src="./images/logo.jpg" alt="logo">
             <div class="dropdown">
                 <div id="drop-down-select">
                     <span>杭州</span>
@@ -25,16 +24,26 @@
                     <li>江苏</li>
                 </ul>
             </div>
-            <nav>
-                <a class="active">首页</a>
-                <a>我要租房</a>
-                <a>业主委托</a>
-                <a>服务</a>
-                <a>社区</a>
-                <a>我们</a>
-                <a>地图找房</a>
-                <a class="iconfont icon-phone">APP下载</a>
-            </nav>
+            <ul class="nav">
+                <li><a href="javascript:;" class="active">首页</a></li>
+                <li><a href="javascript:;">我要租房</a></li>
+                <li><a href="javascript:;">业主委托</a></li>
+                <li><a href="javascript:;">服务</a></li>
+                <li><a href="javascript:;">社区</a></li>
+                <li><a href="javascript:;">我们</a></li>
+                <li><a href="javascript:;">地图找房</a></li>
+                <li><a href="javascript:;" class="iconfont icon-phone">APP下载</a></li>
+            </ul>
+            <!-- <nav>
+                <a href="javascript:;" class="active">首页</a>
+                <a href="javascript:;">我要租房</a>
+                <a href="javascript:;">业主委托</a>
+                <a href="javascript:;">服务</a>
+                <a href="javascript:;">社区</a>
+                <a href="javascript:;">我们</a>
+                <a href="javascript:;">地图找房</a>
+                <a href="javascript:;" class="iconfont icon-phone">APP下载</a>
+            </nav> -->
         </div>
     </header>
     <main>
@@ -56,7 +65,7 @@
                 <li class="iconfont">&#xe608</li>
             </ul>
         </div>
-        <div class="search " id="search">
+        <div class="search" id="search">
             <form>
                 <input type="text" placeholder="输入区域、小区名" id="area-input">
                 <ul class="drop-select" id="area-select">
@@ -69,23 +78,23 @@
                     <li>朝晖</li>
                 </ul>
             </form>
-            <button class="red-btn">马上找房</button>
+            <button type="button" class="red-btn">马上找房</button>
 
             <ul>
                 <li>
-                    <a href="#">萧山北干</a>
+                    <a href="javascript:;">萧山北干</a>
                 </li>
                 <li>
-                    <a href="#">滨江区海创园</a>
+                    <a href="javascript:;" >滨江区海创园</a>
                 </li>
                 <li>
-                    <a href="#">西溪北苑小区</a>
+                    <a href="javascript:;" >西溪北苑小区</a>
                 </li>
                 <li>
-                    <a href="#">寰宇天下</a>
+                    <a href="javascript:;" >寰宇天下</a>
                 </li>
                 <li>
-                    <a href="#">汽车东站</a>
+                    <a href="javascript:;" >汽车东站</a>
                 </li>
             </ul>
         </div>
@@ -95,12 +104,12 @@
                     <h2>推荐房源</h2>
                     <div class="description">
                         <span>精选优质房源，经过严格审核，实拍房源照片，居住安全可靠</span>
-                        <span>查看更多</span>
+                        <a href="javascript:;">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
                     <li class="house  box-shadow box-hover">
-                        <img src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -110,7 +119,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -120,7 +129,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -130,7 +139,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -155,16 +164,16 @@
                     <span></span>
                 </p>
             </div>
-            <button class="commissioning-btn red-btn">立即委托</button>
+            <button type="button" class="commissioning-btn red-btn">立即委托</button>
         </div>
         <div class="band-house">
             <div>
                 <div class="band-house-title" id="band-house-btns">
                     <h2>品牌公寓</h2>
-                    <button class="active-btn">偶寓</button>
-                    <button>随寓</button>
-                    <button>集寓</button>
-                    <span>查看更多</span>
+                    <button type="button" class="active-btn">偶寓</button>
+                    <button type="button">随寓</button>
+                    <button type="button">集寓</button>
+                    <a href="javascript:;">查看更多</a>
                 </div>
                 <ul class="band-house-show show-list display-show">
                     <li class="band-house-desp rect box-shadow  box-hover">
@@ -179,13 +188,13 @@
                         <div class="slideshow screen" id="slide-show1">
                             <ul >
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_1.png">
+                                    <img class="house-img box-shadow" src="./images/ouyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_2.png">
+                                    <img class="house-img box-shadow" src="./images/ouyu_2.png" alt="ouyu_2">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/ouyu_3.png">
+                                    <img class="house-img box-shadow" src="./images/ouyu_3.png" alt="ouyu_3">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -195,11 +204,10 @@
                                 <span class="slide-next  iconfont">&#xe64a</span>
                             </div>
                         </div>
-
                     </li>
 
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -221,13 +229,13 @@
                         <div class="slideshow screen" id="slide-show3">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_1.png">
+                                    <img class="house-img box-shadow" src="./images/suiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_2.png">
+                                    <img class="house-img box-shadow" src="./images/suiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/suiyu_3.png">
+                                    <img class="house-img box-shadow" src="./images/suiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -239,7 +247,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -262,13 +270,13 @@
                         <div class="slideshow screen" id="slide-show2">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_2.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -280,7 +288,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web">
+                        <img src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span>3600元/月</span>
@@ -300,7 +308,7 @@
                     <h2>爱上租服务</h2>
                     <div class="description">
                         <span>为您提供全方位管家式的优质服务，找房、入住、租后统统交给贴心管家，让生活简单有趣</span>
-                        <span>查看更多</span>
+                        <a href="javascript:;">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
@@ -308,13 +316,13 @@
                         <div class="slideshow screen">
                             <ul>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_1.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_2.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="house-img box-shadow" src="./images/jiyu_3.png">
+                                    <img class="house-img box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -337,27 +345,27 @@
                         <h4>自助服务</h4>
                         <ul>
                             <li>
-                                <a>自助服务</a>
+                                <a href="javascript:;">自助服务</a>
                             </li>
                             <li>
-                                <a>维修服务</a>
+                                <a href="javascript:;">维修服务</a>
                             </li>
                             <li>
-                                <a>解约流程</a>
+                                <a href="javascript:;">解约流程</a>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <a>入住须知</a>
+                                <a href="javascript:;">入住须知</a>
                             </li>
                             <li>
-                                <a>保洁服务</a>
+                                <a href="javascript:;">保洁服务</a>
                             </li>
                             <li>
-                                <a>智能锁项</a>
+                                <a href="javascript:;">智能锁项</a>
                             </li>
                         </ul>
-                        <button>了解更多</button>
+                        <button type="button">了解更多</button>
                     </li>
                 </ul>
             </div>
@@ -368,19 +376,19 @@
                     <h2>爱上租社区</h2>
                     <div class="description">
                         <span>找到你的租客部落，加入你的兴趣社群，赶走无聊生活，一起造趣</span>
-                        <span>查看更多</span>
+                        <a href="javascript:;">查看更多</a>
                     </div>
                 </div>
                 <ul class="show-list">
                     <li class="box-shadow community-desp">
-                        <img src="./images/community1.png">
+                        <img src="./images/community1.png" alt="community1">
                         <div>
                             <h3>爱上租理想家计划VOL.2</h3>
                             <p>她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
                         </div>
                     </li>
                     <li class="box-shadow community-desp">
-                        <img src="./images/community2.png">
+                        <img src="./images/community2.png" alt="community2">
                         <div>
                             <h3>我所有的美好都源自于我的女朋友</h3>
                             <p>她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
@@ -392,22 +400,22 @@
         <div class="character">
             <ul class="show-list">
                 <li>
-                    <img src="./images/service-manager.png">
+                    <img src="./images/service-manager.png" alt="服务管家">
                     <h3>服务管家</h3>
                     <p>专属管家，服务贴心到位</p>
                 </li>
                 <li>
-                    <img src="./images/structure.png">
+                    <img src="./images/structure.png" alt="智能门锁">
                     <h3>智能门锁</h3>
                     <p>一客一锁，居住安全便利</p>
                 </li>
                 <li>
-                    <img src="./images/minute-phase.png">
+                    <img src="./images/minute-phase.png" alt="金融分期">
                     <h3>金融分期</h3>
                     <p>月付房租，资金轻松灵活</p>
                 </li>
                 <li>
-                    <img src="./images/authentication.png">
+                    <img src="./images/authentication.png" alt="租客认证">
                     <h3>租客认证</h3>
                     <p>实名建档，身份真实可靠</p>
                 </li>
@@ -418,24 +426,24 @@
                 <div class="iconfont icon-message"></div>立即咨询</div>
             <div class="quick-btn">
                 <div>
-                    <a class="iconfont icon-user" id="entrust">
+                    <a href="javascript:;" class="iconfont icon-user" id="entrust">
                         <div class="sidebar-show hide">
-                            <p>业主委托</p>
+                            <span>业主委托</span>
                             <i class="triangle"></i>
                         </div>
                     </a>
-                    <a class="iconfont icon-phone" id="qr-code">
+                    <a href="javascript:;" class="iconfont icon-phone" id="qr-code">
                         <div class="sidebar-show hide">
-                            <img src="./images/wecat.svg">
+                            <img src="./images/wecat.svg" alt="APP二维码">
                             <p>爱上租APP</p>
                             <i class="triangle"></i>
                         </div>
                     </a>
                 </div>
                 <div class="up-btn">
-                    <a class="iconfont icon-arrow-up trans-hide" id="up-to-head"></a>
+                    <a href="javascript:;" class="iconfont icon-arrow-up trans-hide" id="up-to-head"></a>
                     <div class="sidebar-show hide" id="up-top-show">
-                        <p>返回顶部</p>
+                        <span>返回顶部</span>
                         <i class="triangle"></i>
                     </div>
                 </div>
@@ -451,16 +459,16 @@
                         <h2>关于爱上租</h2>
                     </li>
                     <li>
-                        <a>公司简介</a>
+                        <a href="javascript:;">公司简介</a>
                     </li>
                     <li>
-                        <a>发展历程</a>
+                        <a href="javascript:;">发展历程</a>
                     </li>
                     <li>
-                        <a>联系我们</a>
+                        <a href="javascript:;">联系我们</a>
                     </li>
                     <li>
-                        <a>加入我们</a>
+                        <a href="javascript:;">加入我们</a>
                     </li>
                 </ul>
                 <ul>
@@ -468,16 +476,16 @@
                         <h2>爱上租社区</h2>
                     </li>
                     <li>
-                        <a>租客活动</a>
+                        <a href="javascript:;">租客活动</a>
                     </li>
                     <li>
-                        <a>品质生活</a>
+                        <a href="javascript:;">品质生活</a>
                     </li>
                     <li>
-                        <a>有趣青年</a>
+                        <a href="javascript:;">有趣青年</a>
                     </li>
                     <li>
-                        <a>新鲜资讯</a>
+                        <a href="javascript:;">新鲜资讯</a>
                     </li>
                 </ul>
                 <ul>
@@ -485,21 +493,21 @@
                         <h2>使用帮助</h2>
                     </li>
                     <li>
-                        <a>业主入驻</a>
+                        <a href="javascript:;">业主入驻</a>
                     </li>
                     <li>
-                        <a>申请有链</a>
+                        <a href="javascript:;">申请有链</a>
                     </li>
                     <li>
-                        <a>网站地图</a>
+                        <a href="javascript:;">网站地图</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <h2>官方客服</h2>
                     </li>
-                    <li class="phone">
-                        400-018-2323
+                    <li  class="phone">
+                        <a  href="tel:400-018-2323" >400-018-2323</a>
                     </li>
                     <li>
                         周一至周日 9:00－22:00
@@ -507,19 +515,19 @@
                 </ul>
                 <ul class="qr-code">
                     <li>
-                        <img src="./images/wecat.svg">
+                        <img src="./images/wecat.svg" alt="APP二维码">
                     </li>
                     <li>
-                        <a>下载爱上租APP</a>
+                        <span>下载爱上租APP</span>
                     </li>
 
                 </ul>
                 <ul class="qr-code">
                     <li>
-                        <img src="./images/wecat.svg">
+                        <img src="./images/wecat.svg" alt="公众号二维码">
                     </li>
                     <li>
-                        <a>关注爱上租公众号</a>
+                        <span>关注爱上租公众号</span>
                     </li>
 
                 </ul>

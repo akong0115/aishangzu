@@ -1,134 +1,3 @@
-/* reset */
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-blockquote,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-pre,
-form,
-fieldset,
-legend,
-button,
-input,
-textarea,
-th,
-td {
-    margin: 0;
-    padding: 0;
-}
-
-body,
-button,
-input,
-select,
-textarea {
-    font: 12px/1.5 tahoma, arial, \5b8b\4f53;
-}
-
-select,
-input,
-button {
-    outline: none;
-    border-radius: 0;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: 0px;
-}
-
-button,
-a {
-    cursor: pointer;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b,
-strong {
-    font-weight: normal
-}
-
-address,
-cite,
-dfn,
-em,
-var {
-    font-style: normal;
-}
-
-small {
-    font-size: 12px;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-sup {
-    vertical-align: text-top;
-}
-
-sub {
-    vertical-align: text-bottom;
-}
-
-legend {
-    color: #000;
-}
-
-fieldset,
-img {
-    border: 0;
-    vertical-align: bottom;
-}
-
-button,
-input,
-select,
-textarea {
-    font-size: 100%;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 /* icon */
 
 @font-face {
@@ -270,24 +139,28 @@ header img {
 
 /* 导航 */
 
-header nav {
+header .nav {
     margin-left: 258px;
     font-size: 16px;
     line-height: 22px;
 }
 
-header nav a {
+header .nav li {
+    float: left;
+}
+
+header .nav a {
     color: #555555;
     margin-right: 48px;
 }
 
-header nav a:hover,
-header nav a:visited,
-header nav a:focus {
+header .nav a:hover,
+header .nav a:visited,
+header .nav a:focus {
     color: #FF3366;
 }
 
-.active {
+.nav li a.active {
     color: #FF3366;
 }
 
@@ -489,14 +362,14 @@ header nav a:focus {
     margin-bottom: 32px;
 }
 
-.section-title span:nth-child(2) {
+.section-title a {
     float: right;
     cursor: pointer;
     margin-left: auto;
+    color:#8A8A8A;
 }
-
-.section-title span:nth-child(2):hover {
-    color: #FF3366;
+.section-title a:hover{
+    color: #f36;
 }
 
 .section-title h2 {
@@ -653,16 +526,15 @@ button.active-btn {
     align-items: center;
 }
 
-.band-house-title span {
+.band-house-title a {
     float: right;
     cursor: pointer;
     font-size: 14px;
     color: #8A8A8A;
     margin-left: auto;
 }
-
-.band-house-title span:hover {
-    color: #FF3366;
+.band-house-title a:hover{
+    color: #f36;
 }
 
 .rect {
@@ -889,7 +761,9 @@ footer {
     padding: 48px;
     min-width: 1300px;
 }
-
+footer a{
+    color:#FFFFFF;
+}
 footer>div {
     display: inline-block;
     text-align: center;
@@ -942,7 +816,7 @@ address {
     color: #8A8A8A;
 }
 
-.phone {
+.phone a{
     font-family: PingFang-SC-Medium;
     font-size: 24px;
     color: #FF3366;
@@ -961,17 +835,13 @@ aside {
     box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 0.06);
 }
 
-aside .icon-phone::before {
-    /* color: #FF3366; */
-}
-
 .icon-user::before {
     content: '\e616';
     /* color: #FF3366; */
 }
 
 .icon-arrow-up {
-    cursor: auto;
+    cursor: pointer;
 }
 
 .up-btn {
@@ -1073,7 +943,7 @@ aside .icon-phone:hover,
     padding: 6px;
 }
 
-.icon-user .sidebar-show p {
+.icon-user .sidebar-show  {
     line-height: 40px;
     background: #212121;
     color: #fff;
@@ -1146,29 +1016,36 @@ aside .icon-phone:hover,
     float: left;
     margin-right: 0;
 }
-.slideshow .car-arrow{
+
+.slideshow .car-arrow {
     position: relative;
 }
-.slideshow .car-arrow span{
+
+.slideshow .car-arrow span {
     height: 40px;
     width: 40px;
     font-size: 24px;
     text-align: center;
 }
-.slideshow .car-arrow span:hover{
+
+.slideshow .car-arrow span:hover {
     color: #FFFFFF;
 }
-.slideshow .img-dot{
+
+.slideshow .img-dot {
     font-size: 8px;
     justify-content: flex-end;
     right: 16px;
 }
-.slide-prev ,.slide-next{
+
+.slide-prev,
+.slide-next {
     font-size: 40px;
     line-height: 40px;
     cursor: pointer;
 }
-.slide-prev{
+
+.slide-prev {
     content: '\e69d';
     height: 40px;
     width: 40px;
@@ -1181,7 +1058,8 @@ aside .icon-phone:hover,
     left: 50px;
     position: absolute;
 }
-.slide-next{
+
+.slide-next {
     content: '\e64a';
     height: 40px;
     width: 40px;
@@ -1194,6 +1072,7 @@ aside .icon-phone:hover,
     position: absolute;
     right: 50px;
 }
-.all ol li.current{
+
+.all ol li.current {
     content: '\e608'
-  }
+}
