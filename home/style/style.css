@@ -952,9 +952,11 @@ ul li:last-child {
 
 .triangle {
     display: inline-block;
-    border-style: solid;
-    border-color: transparent #f36 transparent transparent;
-    border-width: 10px 9px;
+    width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 9px solid #FF3366;
+    border-bottom: 10px solid transparent;   
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
