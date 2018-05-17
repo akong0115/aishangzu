@@ -100,14 +100,14 @@ window.onload = function (e) {
     document.getElementById('up-to-head').onclick = function (e) {
         // document.documentElement.scrollTop=0;
         let timer = null;
-        cancelAnimationFrame(timer);
-        timer = requestAnimationFrame(function fn() {
+        window.cancelAnimationFrame(timer);
+        timer = window.requestAnimationFrame(function fn() {
             let top = document.documentElement.scrollTop || document.documentElement.scrollTop;
             if (top > 0) {
                 document.body.scrollTop = document.documentElement.scrollTop = top - 100;
-                timer = requestAnimationFrame(fn);
+                timer = window.requestAnimationFrame(fn);
             } else {
-                cancelAnimationFrame(timer);
+                window.cancelAnimationFrame(timer);
             }
         });
         document.getElementById('up-top-show').className = 'sidebar-show hide';
@@ -208,100 +208,6 @@ window.onload = function (e) {
         }
     }
     //页面轮播图
-    // let dotNum = 0;
-
-    // function nextImg(className, i) {
-    //   let slideShow = document.getElementsByClassName(className)[i];
-    //   // console.log(slideShow);
-    //   let left = parseInt(slideShow.children[0].style.left);
-    //   let timer = null;
-    //   let flag = 0;
-    //   let slideDots = document.getElementsByClassName('img-dot');
-    //   // console.log(slideDots[1].childElementCount);
-    //   for (let j = 0; j < slideDots[i + 1].childElementCount; j++) {
-    //     slideDots[i + 1].children[j].className = 'iconfont';
-    //   }
-    //   console.log(dotNum);
-    //   if (dotNum < 2) {
-    //     dotNum++;
-    //   } else {
-    //     dotNum = 0;
-    //   }
-    //   timer = setInterval(function () {
-    //     if (left > -2280) {
-    //       if (flag < 570) {
-    //         left -= 10;
-    //         flag += 10
-    //         slideShow.children[0].style.left = `${left}px`;
-    //       }
-    //       else {
-    //         flag = 0;
-    //         slideDots[i + 1].children[dotNum].className = 'iconfont active-dot';
-    //         clearInterval(timer);
-
-    //       }
-    //     } else {
-    //       left = -570;
-    //       slideShow.children[0].style.left = `${left}px`;
-    //       flag = 0;
-    //       slideDots[i + 1].children[0].className = 'iconfont active-dot';
-    //       clearInterval(timer);
-
-    //     }
-    //   }, 10);
-    // }
-    // function prevImg(className, i) {
-    //   let slideShow = document.getElementsByClassName(className)[i];
-    //   let left = parseInt(slideShow.children[0].style.left);
-    //   let timer = null;
-    //   let flag = 0;
-    //   let slideDots = document.getElementsByClassName('img-dot');
-    //   for (let j = 0; j < slideDots[i + 1].childElementCount; j++) {
-    //     slideDots[i + 1].children[j].className = 'iconfont';
-    //   }
-    //   if (dotNum >0) {
-    //     dotNum--;
-    //   } else {
-    //     dotNum = 2;
-    //   }
-    //   timer = setInterval(function () {
-    //     if (left < 0) {
-    //       if (flag < 570) {
-    //         left += 10;
-    //         flag += 10
-    //         slideShow.children[0].style.left = `${left}px`;
-    //       }
-    //       else {
-    //         flag=0;
-    //         slideDots[i + 1].children[dotNum].className = 'iconfont active-dot';
-    //         clearInterval(timer);
-    //       }
-    //     } else {
-    //       left = -1710;
-    //       slideShow.children[0].style.left = `${left}px`;
-    //       slideDots[i + 1].children[2].className = 'iconfont active-dot';
-    //       flag = 0;
-    //       clearInterval(timer);
-    //     }
-    //   }, 10);
-    // }
-
-
-
-    // let slidePrevs = document.getElementsByClassName('slide-prev');
-    // for (let i = 0; i < slidePrevs.length; i++) {
-    //   slidePrevs[i].onclick = function (e) {
-    //     e.stopPropagation();
-    //     prevImg(`slideshow`, i);
-    //   }
-    // }
-    // let slideNexts = document.getElementsByClassName('slide-next');
-    // for (let i = 0; i < slideNexts.length; i++) {
-    //   slideNexts[i].onclick = function (e) {
-    //     e.stopPropagation();
-    //     nextImg(`slideshow`, i);
-    //   }
-    // }
     //动画函数
     function animate(el, target) {
         if (el.timer) {

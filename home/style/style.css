@@ -97,7 +97,6 @@ a:hover {
   /* visibility: hidden; */
   display: none;
   position: absolute;
-  left: 50%;
   transform: translateX(-50%);
   /* css3 GPU 加速 */
   transform: translateZ(0);
@@ -283,8 +282,9 @@ a:hover {
 
 .search-fixed {
   background: #fff;
-  width: 100%;
   position: fixed;
+  right: 0;
+  left: 0;
   top: 0;
   opacity: .95;
   -moz-box-shadow: 3px 3px 3px #eee;
@@ -845,12 +845,12 @@ ul li:last-child {
   width: 88px;
   height: 40px;
   left: -88px;
+  /* css3 GPU 加速 */
+  transform: translateZ(0);
   position: absolute;
   top: 50%;
   padding: 0;
   transform: translateY(-50%);
-  /* css3 GPU 加速 */
-  transform: translateZ(0);
   line-height: 40px;
   background: #212121;
   color: #fff;
@@ -934,10 +934,10 @@ ul li:last-child {
   color: #000;
   position: absolute;
   left: -108px;
-  top: 50%;
-  transform: translateY(-50%);
   /* css3 GPU 加速 */
   transform: translateZ(0);
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 12px;
   text-align: center;
   background: #ffffff;
@@ -955,12 +955,12 @@ ul li:last-child {
   width: 88px;
   height: 40px;
   left: -88px;
+  /* css3 GPU 加速 */
+  transform: translateZ(0);
   position: absolute;
   top: 50%;
   padding: 0;
   transform: translateY(-50%);
-  /* css3 GPU 加速 */
-  transform: translateZ(0);
 }
 
 .sidebar-show img {
@@ -976,10 +976,10 @@ ul li:last-child {
   border-right: 9px solid #ff3366;
   border-bottom: 10px solid transparent;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   /* css3 GPU 加速 */
   transform: translateZ(0);
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
 }
 
