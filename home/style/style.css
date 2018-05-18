@@ -11,7 +11,7 @@
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: .2px;
+  /* -webkit-text-stroke-width: .2px; */
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -255,6 +255,7 @@ a:hover {
 
 .search {
   /* white-space:nowrap; */
+  min-width: 1400px;
   height: 140px;
   display: flex;
   justify-content: center;
@@ -650,6 +651,7 @@ a:hover {
   border-radius: 2px;
   padding: 6px 12px;
   margin-top: 38px;
+  background: #f8f8f8;
 }
 
 .more-btn:hover {
