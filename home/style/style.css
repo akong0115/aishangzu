@@ -4,6 +4,8 @@
   font-family: 'iconfont';
   src: url('iconfont.eot');
   src: url('iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont.woff') format('woff'), url('iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .iconfont {
@@ -35,6 +37,7 @@
   opacity: .8;
 }
 
+
 a:hover {
   color: #ff3366;
 }
@@ -48,20 +51,32 @@ a:hover {
 }
 
 /* header */
-
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 .header {
-  display: flex;
-  min-width: 1300px;
-  /* width: 100%; */
-  /* white-space:nowrap; */
-  height: 64px;
+    min-width: 1300px;
+    height: 64px;
+    text-align: center;
 }
 
 .head-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  text-align: left;
+}
+.global-header-container {
+  position: relative;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+.head-box img,
+.head-box article {
+  float: left;
 }
 
 /* 下拉 */
@@ -97,6 +112,7 @@ a:hover {
   /* visibility: hidden; */
   display: none;
   position: absolute;
+  left: 0;
   transform: translateX(-50%);
   /* css3 GPU 加速 */
   transform: translateZ(0);
@@ -175,20 +191,20 @@ a:hover {
   height: 460px;
 }
 
-.carousel-img li:nth-of-type(1) {
-  background: url('../images/5df8197b-9828-4ee2-b3f8-f0bae1cd19f4.jpg@!1920w_126h_jpg_web') no-repeat center center;
+.carousel-img li:first-child {
+  background: url(../images/5df8197b-9828-4ee2-b3f8-f0bae1cd19f4.jpg@!1920w_126h_jpg_web) no-repeat center center;
 }
 
-.carousel-img li:nth-of-type(2) {
-  background: url('../images/a1f89121-aa0e-4c84-80e1-013ce9899eec.jpg@!1920w_126h_jpg_web') no-repeat center center;
+.carousel-img li:first-child+li {
+  background: url(../images/a1f89121-aa0e-4c84-80e1-013ce9899eec.jpg@!1920w_126h_jpg_web) no-repeat center center;
 }
 
-.carousel-img li:nth-of-type(3) {
-  background: url('../images/cd77b2a2-8fb6-49be-bd74-9b4a1143bd54.png@!1920w_126h_jpg_web')no-repeat center center;
+.carousel-img li:first-child+li+li {
+  background: url(../images/cd77b2a2-8fb6-49be-bd74-9b4a1143bd54.png@!1920w_126h_jpg_web) no-repeat center center;
 }
 
-.carousel-img li:nth-of-type(4) {
-  background: url('../images/44740a01-ff0f-467a-86a0-861687ca726f.png@!1920w_126h_jpg_web')no-repeat center center;
+.carousel-img li:first-child+li+li+li {
+  background: url(../images/44740a01-ff0f-467a-86a0-861687ca726f.png@!1920w_126h_jpg_web) no-repeat center center;
 }
 
 .car-arrow {
@@ -255,7 +271,6 @@ a:hover {
 
 .search {
   /* white-space:nowrap; */
-  min-width: 1400px;
   height: 140px;
   display: flex;
   justify-content: center;
@@ -419,6 +434,7 @@ a:hover {
   -moz-box-shadow: 3px 3px 3px #eee;
   -webkit-box-shadow: 3px 3px 3px #eee;
   box-shadow: 3px 3px 3px #eee;
+  -sand-box-shadow: 3px 3px 3px #eee;
 }
 
 /* 委托流程 */
@@ -651,7 +667,6 @@ a:hover {
   border-radius: 2px;
   padding: 6px 12px;
   margin-top: 38px;
-  background: #f8f8f8;
 }
 
 .more-btn:hover {

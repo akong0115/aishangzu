@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+
     <title>爱上租</title>
+
     <link rel="stylesheet" type="text/css" href="style/reset.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 
 <body>
-    <header class="header">
-        <section class="head-box">
-            <img src="./images/logo.jpg" alt="logo" class="logo">
-            <article class="dropdown">
+    <div class="header clearfix">
+        <div class="head-box global-header-container">
+            <img src="./images/logo.png" alt="logo" class="logo">
+            <div class="dropdown">
                 <div id="drop-down-select" class="drop-down-select">
                     <span>杭州</span>
                     <span class="iconfont icon-arrow-down"></span>
@@ -23,7 +26,7 @@
                     <li>南京</li>
                     <li>江苏</li>
                 </ul>
-            </article>
+            </div>
             <ul class="nav">
                 <li>
                     <a href="javascript:;" class="active">首页</a>
@@ -50,10 +53,10 @@
                     <a href="javascript:;" class="iconfont icon-phone">APP下载</a>
                 </li>
             </ul>
-        </section>
-    </header>
-    <main class="main">
-        <article class="carousel">
+        </div>
+    </div>
+    <div class="main">
+        <div class="carousel">
             <ul class="carousel-img" id="carousel-img">
                 <li class="display-show"></li>
                 <li class="display-none"></li>
@@ -70,8 +73,8 @@
                 <li class="iconfont">&#xe608</li>
                 <li class="iconfont">&#xe608</li>
             </ul>
-        </article>
-        <article class="search" id="search">
+        </div>
+        <div class="search" id="search">
             <form class="search-form">
                 <input type="text" placeholder="输入区域、小区名" id="area-input" class="search-input">
                 <ul class="drop-select search-drop-select" id="area-select">
@@ -103,8 +106,8 @@
                     <a href="javascript:;">汽车东站</a>
                 </li>
             </ul>
-        </article>
-        <article class="recommend">
+        </div>
+        <div class="recommend">
             <div class="center-con">
                 <div class="section-title">
                     <h2 class="section-title-h2">推荐房源</h2>
@@ -156,8 +159,8 @@
                     </li>
                 </ul>
             </div>
-        </article>
-        <article class="commissioning-process">
+        </div>
+        <div class="commissioning-process">
             <div class="process">
                 <span>【 委托流程 】 </span>
                 <span class="iconfont icon-arrow-right">发起委托</span>
@@ -171,8 +174,8 @@
                 </p>
             </div>
             <button type="button" class="commissioning-btn red-btn">立即委托</button>
-        </article>
-        <article class="band-house">
+        </div>
+        <div class="band-house">
             <div class="center-con">
                 <div class="band-house-title" id="band-house-btns">
                     <h2 class="section-title-h2">品牌公寓</h2>
@@ -307,9 +310,9 @@
                 </ul>
 
             </div>
-        </article>
+        </div>
 
-        <article class="service">
+        <div class="service">
             <div class="center-con">
                 <div class="section-title">
                     <h2 class="section-title-h2">爱上租服务</h2>
@@ -376,8 +379,8 @@
                     </li>
                 </ul>
             </div>
-        </article>
-        <article class="community">
+        </div>
+        <div class="community">
             <div class="center-con">
                 <div class="section-title">
                     <h2 class="section-title-h2">爱上租社区</h2>
@@ -403,8 +406,8 @@
                     </li>
                 </ul>
             </div>
-        </article>
-        <article class="character">
+        </div>
+        <div class="character">
             <ul class="show-list">
                 <li>
                     <img src="./images/service-manager.png" alt="服务管家">
@@ -427,8 +430,8 @@
                     <p class="character-p">实名建档，身份真实可靠</p>
                 </li>
             </ul>
-        </article>
-        <aside class="aside">
+        </div>
+        <div class="aside">
             <div class="ques-btn red-btn">
                 <div class="iconfont icon-message"></div>立即咨询</div>
             <div class="quick-btn">
@@ -455,12 +458,12 @@
                     </div>
                 </div>
             </div>
-        </aside>
-    </main>
-    <footer class="footer">
+        </div>
+    </div>
+    <div class="footer">
         <section class="center-con">
             <h1 class="footer-title">杭州租房</h1>
-            <article class="footer-con">
+            <div class="footer-con">
                 <ul class="footer-ul">
                     <li>
                         <h2 class="footer-h2">关于爱上租</h2>
@@ -538,11 +541,12 @@
                     </li>
 
                 </ul>
-            </article>
+            </div>
             <address class="address">© Hangzhou ishangzu Technology Co.,Ltd. All rights reserved.备案号：浙ICP备15007224号-2浙公网安备 33010802006107号</address>
         </section>
-    </footer>
-    <script src="./js/index.js"></script>
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+
 </body>
 
 </html>
