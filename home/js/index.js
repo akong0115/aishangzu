@@ -172,7 +172,7 @@ window.onload = function (e) {
         }
     }
     // 定时轮播图
-    let carouselTimer = setInterval(function () {
+    let carouselTimer = setTimeout(function fn() {
         for (let i = 0; i < imgs.length; i++) {
             if (imgs[i].className === 'display-show') {
                 if (i == 3) {
@@ -180,12 +180,14 @@ window.onload = function (e) {
                     imgs[i].className = 'display-none';
                     dots[0].className = 'iconfont active-dot';
                     dots[3].className = 'iconfont';
+                    setTimeout(fn, 5000);
                     return false;
                 } else {
                     imgs[i].className = 'display-none';
                     imgs[i + 1].className = 'display-show';
                     dots[i].className = 'iconfont';
                     dots[i + 1].className = 'iconfont active-dot';
+                    setTimeout(fn, 5000);
                     return false;
                 }
             }
@@ -207,9 +209,9 @@ window.onload = function (e) {
     //动画函数
     function animate(el, target) {
         if (el.timer) {
-            clearInterval(el.timer);
+            clearTimeout(el.timer);
         }
-        el.timer = setInterval(function () {
+        el.timer = setTimeout(function fn() {
             //leader = leader + step
             var leader = el.offsetLeft;
             var step = 30;
@@ -221,9 +223,10 @@ window.onload = function (e) {
                 leader = leader + step;
                 el.style.left = leader + "px";
             } else {
-                clearInterval(el.timer);
+                clearTimeout(el.timer);
                 el.style.left = target + "px";
             }
+            el.timer = setTimeout(fn, 15);
         }, 15);
     }
 
@@ -272,20 +275,19 @@ window.onload = function (e) {
                     pic = fk = this.index;
                 })
             }
-            // rightArr.onclick();
-
         };
         init();
         box.onmouseover = function () {
             this.children[0].children[2].style.display = "block";
             //清除定时器
-            clearInterval(timer);
+            clearTimeout(timer);
         }
         box.onmouseleave = function () {
             arr.style.display = "none";
-            timer = setInterval(function () {
+            timer = setTimeout(function fn() {
                 rightArr.onclick();
-            }, 1000)
+                timer = setTimeout(fn, 5000);
+            }, 5000)
         }
         //4.3 点击右箭头
         rightArr.onclick = function () {
@@ -327,9 +329,10 @@ window.onload = function (e) {
             animate(ul, target);
         }
 
-        timer = setInterval(function () {
+        timer = setTimeout(function fn() {
             rightArr.onclick();
-        }, 1000);
+            timer = setTimeout(fn, 5000);
+        }, 5000);
     }
     mySlide('slide-show1');
     mySlide('slide-show4');
