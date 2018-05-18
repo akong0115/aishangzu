@@ -54,21 +54,21 @@ window.onload = function (e) {
 
     // 侧边栏
     document.getElementById('entrust').onmousemove = function (e) {
-        e.stopPropagation();
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
         this.children[0].className = 'sidebar-show';
     }
     document.getElementById('entrust').onmouseout = function (e) {
-        e.stopPropagation();
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
         this.children[0].className = 'sidebar-show hide';
 
     }
     document.getElementById('qr-code').onmouseover = function (e) {
-        e.stopPropagation();
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
         this.children[0].className = 'sidebar-show';
 
     }
     document.getElementById('qr-code').onmouseout = function (e) {
-        e.stopPropagation();
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
         this.children[0].className = 'sidebar-show hide';
 
     }
@@ -115,14 +115,8 @@ window.onload = function (e) {
     // 品牌按钮
     for (let i = 1; i < 4; i++) {
         document.getElementById('band-house-btns').children[i].onclick = function (e) {
-            e.stopPropagation();
-            // getEl(i - 1)[i-1];
-            clearInterval(timer);
-            pic = fk = 0;
-            timer = setInterval(function () {
-                getEl(i - 1)[i - 1];
-            }, 1000);
-            console.log(this.parentElement);
+            window.event ? window.event.cancelBubble = true : e.stopPropagation();
+
             for (let j = 1; j < 4; j++) {
                 this.parentElement.children[j].className = 'band-house-btn';
             }
@@ -131,7 +125,9 @@ window.onload = function (e) {
                 this.parentElement.parentElement.children[j].className = 'band-house-show show-list display-none';
             }
             this.parentElement.parentElement.children[i].className = 'band-house-show show-list display-show';
+            mySlide(`slide-show${i}`);
         }
+
     }
     //顶部轮播图
     let imgs = document.getElementById('carousel-img').children;
@@ -202,7 +198,7 @@ window.onload = function (e) {
                 imgs[j].className = 'display-none';
                 dots[j].className = 'iconfont';
             }
-            e.stopPropagation();
+            window.event ? window.event.cancelBubble = true : e.stopPropagation();
             imgs[i].className = 'display-show';
             dots[i].className = 'iconfont active-dot';
         }
@@ -230,119 +226,111 @@ window.onload = function (e) {
             }
         }, 15);
     }
-    //1. 找对象
-    let imgwidth = document.getElementsByClassName("slideshow")[0].offsetWidth;
-    let pic = fk = 0;
 
-    function getEl(num) {
-        let box = document.getElementsByClassName("all")[num];
-        let slideshow = document.getElementsByClassName("slideshow")[num];
+    function mySlide(id) {
+        //1. 找对象
+        let imgwidth = document.getElementById(id).offsetWidth;
+        // console.log(imgwidth);
+        let slideshow = document.getElementById(id);
+        let box = slideshow.parentElement;
         let ul = slideshow.children[0];
         let ullis = ul.children;
         let ol = slideshow.children[1];
-        let arr = document.getElementsByClassName('slide-arr')[num];
-        let leftArr = document.getElementsByClassName("slide-prev")[num];
-        let rightArr = document.getElementsByClassName("slide-next")[num];
+        let ollis;
+        let arr = slideshow.children[2];
+        let leftArr = arr.children[0];
+        let rightArr = arr.children[1];
+        let pic = 0;
         let timer = null;
-        //2. 动态创建结构
-        //2.1 创建小方块,ulLis
-        //根据ul中li的个数创建小方块
-        if (ol.childElementCount == 0)
+
+        function init() {
             for (var i = 0; i < ullis.length; i++) {
                 var li = document.createElement("li");
                 ol.appendChild(li);
                 li.innerHTML = '&#xe608';
                 li.className = 'iconfont';
             }
-        let ollis = ol.children;
-        ollis[0].className = "iconfont active-dot";
-        //2.2 创建假图片
-        //2.2.1 克隆ul下的第一个li
-        var cloneli = ullis[0].cloneNode(true);
-        ul.appendChild(cloneli);
-        //3. 简单轮播功能
-        //3.1 给小方块注册点击事件
-        for (var i = 0; i < ollis.length; i++) {
-            ollis[i].index = i; //存索引
-            ollis[i].addEventListener("click", function () {
-                //3.2 小方块高亮排他
-                for (var i = 0; i < ollis.length; i++) {
-                    ollis[i].className = "iconfont";
-                }
-                this.className = "iconfont active-dot";
-                //3.3. 移动ul
-                var target = -this.index * imgwidth;
-                animate(ul, target);
-                pic = fk = this.index;
-            })
-        }
-        //4. 左右焦点功能（无缝）
-        //4.1 鼠标经过盒子，显示箭头
+            ollis = ol.children;
+            ollis[0].className = "iconfont active-dot";
+            //2.2 创建假图片
+            //2.2.1 克隆ul下的第一个li
+            var cloneli = ullis[0].cloneNode(true);
+            ul.appendChild(cloneli);
+            //3. 简单轮播功能
+            //3.1 给小方块注册点击事件
+            for (var i = 0; i < ollis.length; i++) {
+                ollis[i].index = i; //存索引
+                ollis[i].addEventListener("click", function () {
+                    //3.2 小方块高亮排他
+                    for (var i = 0; i < ollis.length; i++) {
+                        ollis[i].className = "iconfont";
+                    }
+                    this.className = "iconfont active-dot";
+                    //3.3. 移动ul
+                    var target = -this.index * imgwidth;
+                    animate(ul, target);
+                    pic = fk = this.index;
+                })
+            }
+            // rightArr.onclick();
+
+        };
+        init();
         box.onmouseover = function () {
-            arr.style.display = "block";
+            this.children[0].children[2].style.display = "block";
             //清除定时器
             clearInterval(timer);
         }
-        //4.2 鼠标离开盒子，隐藏箭头
         box.onmouseleave = function () {
             arr.style.display = "none";
             timer = setInterval(function () {
-                rightClick();
+                rightArr.onclick();
             }, 1000)
         }
         //4.3 点击右箭头
-        function rightClick() {
+        rightArr.onclick = function () {
             //如果已经到了最后一张假图片，让ul瞬移到第一张真图片
+            // console.log(ollis.length);
             if (pic === ollis.length) {
                 ul.style.left = 0;
                 pic = 0;
             }
             pic++; //记录出去的图片张数
-            fk++;
-            if (fk === ollis.length) {
-                fk = 0;
-            }
             for (var i = 0; i < ollis.length; i++) {
                 ollis[i].className = "iconfont";
             }
-            ollis[fk].className = "iconfont active-dot";
+            if (pic !== ollis.length) {
+                ollis[pic].className = "iconfont active-dot";
+            } else {
+                ollis[0].className = 'iconfont active-dot';
+            }
             var target = -pic * imgwidth;
             animate(ul, target);
         }
-        rightArr.onclick = rightClick;
-
         //4.4 点击左箭头
-        function leftClick() {
+        leftArr.onclick = function () {
             if (pic === 0) {
                 ul.style.left = -(ullis.length - 1) * imgwidth + "px";
                 pic = ullis.length - 1;
             }
             pic--;
-            //同步小方块
-            fk--;
-            if (fk === -1) {
-                fk = ollis.length - 1;
-            }
             for (var i = 0; i < ollis.length; i++) {
                 ollis[i].className = "iconfont";
             }
-            ollis[fk].className = "iconfont active-dot";
+            if (pic === -1) {
+                ollis[ollis.length].className = 'iconfont active-dot'
+            } else {
+                ollis[pic].className = "iconfont active-dot";
+
+            }
             var target = -pic * imgwidth;
             animate(ul, target);
         }
-        leftArr.onclick = leftClick;
-        return [rightClick, leftClick];
+
+        timer = setInterval(function () {
+            rightArr.onclick();
+        }, 1000);
     }
-    // console.log(getEl(0)[0]);
-    //5. 自动播放的功能
-    timer = setInterval(function () {
-        getEl(0)[0]();
-    }, 5000);
-    // let timer2 = setInterval(function () {
-    //   getEl(3)[0]();
-    // }, 4000);
-    //6. 同步问题
-    //6.1 点击右箭头,同步
-    //6.2 点击左箭头，同步
-    //6.3 点击小方块，同步
+    mySlide('slide-show1');
+    mySlide('slide-show4');
 }
