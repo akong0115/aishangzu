@@ -51,7 +51,8 @@ window.onload = function (e) {
             for (var i = 0; i < 4; i++) {
                 document.getElementById('city-select').children[i].onclick = function (e) {
                     this.parentElement.parentElement.children[0].children[0].innerHTML = this.innerHTML;
-                    for (var _i = 0; _i < this.parentElement.childElementCount; _i++) {
+                    for (var _i = 0; _i < this.parentElement.childNodes.length; _i++) {
+                        // console.log(this.parentElement.children[_i].className);
                         this.parentElement.children[_i].className = '';
                     }
                     this.className = 'active-selected';
@@ -68,9 +69,9 @@ window.onload = function (e) {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
         if (this.parentElement.children[1].className === 'drop-select search-drop-select') {
             this.parentElement.children[1].className = 'drop-select search-drop-select show';
-            for (var i = 0; i < this.parentElement.children[1].childElementCount; i++) {
+            var length=this.parentElement.children[1].childNodes.length;
+            for (var i = 0; i < length; i++) {
                 this.parentElement.children[1].children[i].onclick = function (e) {
-                    // console.log(this.parentElement.parentElement.children[0]);
                     this.parentElement.parentElement.children[0].value = this.innerHTML;
                 };
             }
@@ -100,15 +101,16 @@ window.onload = function (e) {
     };
     document.getElementById('qr-code').onmouseover = function (e) {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
-        this.children[0].className = 'sidebar-show';
+        this.children[0].className = 'sidebar-show  sidebar-qr';
     };
     document.getElementById('qr-code').onmouseout = function (e) {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
-        this.children[0].className = 'sidebar-show hide';
+        this.children[0].className = 'sidebar-show hide  sidebar-qr';
     };
     // 滚动
     window.onscroll = function (e) {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
+        // console.log(t);
         if (t > 668) {
             document.getElementById('search').className = 'search search-fixed';
         } else {
@@ -175,14 +177,14 @@ window.onload = function (e) {
                 if (i == 0) {
                     imgs[3].className = 'display-show';
                     imgs[i].className = 'display-none';
-                    dots[3].className = 'iconfont active-dot';
-                    dots[i].className = 'iconfont';
+                    dots[3].className = 'iconfont active-dot icon-dot';
+                    dots[i].className = 'iconfont icon-dot';
                     return false;
                 } else {
                     imgs[i].className = 'display-none';
                     imgs[i - 1].className = 'display-show';
-                    dots[i].className = 'iconfont';
-                    dots[i - 1].className = 'iconfont active-dot';
+                    dots[i].className = 'iconfont  icon-dot';
+                    dots[i - 1].className = 'iconfont active-dot icon-dot';
                     return false;
                 }
             }
@@ -194,14 +196,14 @@ window.onload = function (e) {
                 if (i == 3) {
                     imgs[0].className = 'display-show';
                     imgs[i].className = 'display-none';
-                    dots[0].className = 'iconfont active-dot';
-                    dots[3].className = 'iconfont';
+                    dots[0].className = 'iconfont active-dot icon-dot';
+                    dots[3].className = 'iconfont icon-dot';
                     return false;
                 } else {
                     imgs[i].className = 'display-none';
                     imgs[i + 1].className = 'display-show';
-                    dots[i].className = 'iconfont';
-                    dots[i + 1].className = 'iconfont active-dot';
+                    dots[i].className = 'iconfont icon-dot';
+                    dots[i + 1].className = 'iconfont active-dot icon-dot';
                     return false;
                 }
             }
@@ -214,15 +216,15 @@ window.onload = function (e) {
                 if (i == 3) {
                     imgs[0].className = 'display-show';
                     imgs[i].className = 'display-none';
-                    dots[0].className = 'iconfont active-dot';
-                    dots[3].className = 'iconfont';
+                    dots[0].className = 'iconfont active-dot icon-dot';
+                    dots[3].className = 'iconfont icon-dot';
                     setTimeout(fn, 5000);
                     return false;
                 } else {
                     imgs[i].className = 'display-none';
                     imgs[i + 1].className = 'display-show';
-                    dots[i].className = 'iconfont';
-                    dots[i + 1].className = 'iconfont active-dot';
+                    dots[i].className = 'iconfont icon-dot';
+                    dots[i + 1].className = 'iconfont active-dot icon-dot';
                     setTimeout(fn, 5000);
                     return false;
                 }
@@ -235,11 +237,11 @@ window.onload = function (e) {
         dots[i].onclick = function (e) {
             for (var j = 0; j < 4; j++) {
                 imgs[j].className = 'display-none';
-                dots[j].className = 'iconfont';
+                dots[j].className = 'iconfont icon-dot';
             }
             window.event ? window.event.cancelBubble = true : e.stopPropagation();
             imgs[i].className = 'display-show';
-            dots[i].className = 'iconfont active-dot';
+            dots[i].className = 'iconfont active-dot icon-dot';
         };
     };
 
@@ -288,28 +290,33 @@ window.onload = function (e) {
         var timer = null;
 
         function init() {
-            for (var i = 0; i < ullis.length; i++) {
+            // ol.childElementCount == 0| ie8 没有
+            if (ol.childElementCount == 0||ol.childNodes.length==0) {
+                //2.2 创建假图片
+                //2.2.1 克隆ul下的第一个li
+                var cloneli = ullis[0].cloneNode(true);
+                ul.appendChild(cloneli);
+                ullis = ul.children;
+            }
+            ol.innerHTML = '';
+            for (var i = 0; i < ullis.length - 1; i++) {
                 var li = document.createElement("li");
                 ol.appendChild(li);
-                li.innerHTML = '&#xe608';
-                li.className = 'iconfont';
+                li.className = 'iconfont icon-dot';
             }
             ollis = ol.children;
-            ollis[0].className = "iconfont active-dot";
-            //2.2 创建假图片
-            //2.2.1 克隆ul下的第一个li
-            var cloneli = ullis[0].cloneNode(true);
-            ul.appendChild(cloneli);
+            ollis[0].className = "iconfont active-dot icon-dot";
+
             //3. 简单轮播功能
             //3.1 给小方块注册点击事件
             for (var i = 0; i < ollis.length; i++) {
                 ollis[i].index = i; //存索引
-                addEventListener(ollis[i],"click", function () {
+                addEventListener(ollis[i], "click", function () {
                     //3.2 小方块高亮排他
                     for (var i = 0; i < ollis.length; i++) {
-                        ollis[i].className = "iconfont";
+                        ollis[i].className = "iconfont icon-dot";
                     }
-                    this.className = "iconfont active-dot";
+                    this.className = "iconfont active-dot icon-dot";
                     //3.3. 移动ul
                     var target = -this.index * imgwidth;
                     animate(ul, target);
@@ -340,12 +347,12 @@ window.onload = function (e) {
             }
             pic++; //记录出去的图片张数
             for (var i = 0; i < ollis.length; i++) {
-                ollis[i].className = "iconfont";
+                ollis[i].className = "iconfont icon-dot";
             }
             if (pic !== ollis.length) {
-                ollis[pic].className = "iconfont active-dot";
+                ollis[pic].className = "iconfont active-dot icon-dot";
             } else {
-                ollis[0].className = 'iconfont active-dot';
+                ollis[0].className = 'iconfont active-dot icon-dot';
             }
             var target = -pic * imgwidth;
             animate(ul, target);
@@ -358,12 +365,12 @@ window.onload = function (e) {
             }
             pic--;
             for (var i = 0; i < ollis.length; i++) {
-                ollis[i].className = "iconfont";
+                ollis[i].className = "iconfont icon-dot";
             }
             if (pic === -1) {
-                ollis[ollis.length].className = 'iconfont active-dot';
+                ollis[ollis.length].className = 'iconfont active-dot icon-dot';
             } else {
-                ollis[pic].className = "iconfont active-dot";
+                ollis[pic].className = "iconfont active-dot icon-dot";
             }
             var target = -pic * imgwidth;
             animate(ul, target);
