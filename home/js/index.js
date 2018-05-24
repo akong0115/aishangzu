@@ -2,13 +2,15 @@
 
 window.onload = function (e) {
     // 兼容ie10以下对requestAnimation
-    window.requestAnimationFrame = window.requestAnimationFrame || function (fn) { return setTimeout(fn, 1000 / 60) }
+    window.requestAnimationFrame = window.requestAnimationFrame || function (fn) {
+        return setTimeout(fn, 1000 / 60);
+    };
     window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
     //兼容bind函数
     if (!Function.prototype.bind) {
         Function.prototype.bind = function () {
-            if (typeof this !== 'function') {　　　　　　
-                throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');　　　　
+            if (typeof this !== 'function') {
+                throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
             }
             var _this = this;
             var obj = arguments[0];
@@ -41,6 +43,7 @@ window.onload = function (e) {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
         document.getElementById('city-select').className = 'drop-select';
         document.getElementById('drop-down-select').children[1].className = "iconfont icon-arrow-down";
+        document.getElementById('area-select').className = 'drop-select search-drop-select';
     };
     // 城市选择
     document.getElementById('drop-down-select').onclick = function (event) {
@@ -63,31 +66,48 @@ window.onload = function (e) {
             document.getElementById('city-select').className = 'drop-select';
         }
     };
+    // lazyload
 
     // 搜索
     function areaSeltctShow(event) {
-        window.event ? window.event.cancelBubble = true : e.stopPropagation();
-        if (this.parentElement.children[1].className === 'drop-select search-drop-select') {
-            this.parentElement.children[1].className = 'drop-select search-drop-select show';
-            var length=this.parentElement.children[1].childNodes.length;
+        var dropSelect = this.parentElement.children[1];
+        var place = this.children[1];
+        var input = this.children[0];
+        input.focus();
+        if (dropSelect.className === 'drop-select search-drop-select') {
+            place.className = 'placeholder hide';
+            dropSelect.className = 'drop-select search-drop-select show';
+            var length;
+            dropSelect.childElementCount ? length = dropSelect.childElementCount : length = dropSelect.childNodes.length;
+            console.log(length);
+
             for (var i = 0; i < length; i++) {
-                this.parentElement.children[1].children[i].onclick = function (e) {
-                    this.parentElement.parentElement.children[0].value = this.innerHTML;
+                dropSelect.children[i].onclick = function (e) {
+                    for (var _i2 = 1; _i2 < length; _i2++) {
+                        dropSelect.children[_i2].className = '';
+                    }
+                    this.className = 'active-selected';
+                    input.value = this.innerHTML;
+                    place.className = 'placeholder hide';
                 };
             }
         } else {
-            this.parentElement.children[1].className = 'drop-select search-drop-select';
+            dropSelect.className = 'drop-select search-drop-select';
+            if (input.value === '') {
+                place.className = 'placeholder show';
+            }
         }
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
     }
-    document.getElementById('area-input').onmouseover = areaSeltctShow;
-    document.getElementById('area-input').onmouseout = areaSeltctShow;
+    document.getElementById('area-input-con').onclick = areaSeltctShow;
     document.getElementById('area-select').onmouseover = function (e) {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
-        this.parentElement.children[1].className = 'drop-select search-drop-select show';
+        this.className = 'drop-select search-drop-select show';
     };
-    document.getElementById('area-select').onmouseout = function (e) {
+    document.getElementsByClassName('icon-location')[0].onclick = function () {
         window.event ? window.event.cancelBubble = true : e.stopPropagation();
-        this.parentElement.children[1].className = 'drop-select search-drop-select';
+        document.getElementById('area-input').value = '杭州';
+        document.getElementsByClassName('placeholder')[0].className = 'placeholder hide';
     };
 
     // 侧边栏
@@ -108,7 +128,19 @@ window.onload = function (e) {
         this.children[0].className = 'sidebar-show hide  sidebar-qr';
     };
     // 滚动
-    window.onscroll = function (e) {
+    window.onscroll = throttle(20,windowOnScroll);
+    // 防抖
+     function throttle(delay, action){
+        var last = 0;
+        return function(){
+          var curr = +new Date()
+          if (curr - last > delay){
+            action.apply(this, arguments)
+            last = curr 
+          }
+        }
+      }
+    function windowOnScroll() {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
         // console.log(t);
         if (t > 668) {
@@ -121,7 +153,32 @@ window.onload = function (e) {
         } else {
             document.getElementById('up-to-head').className = 'iconfont icon-arrow-up trans-hide';
         }
-    };
+        lazyLoad();
+      }
+    lazyLoad();
+    // 获取相对于body的距离
+    function getOffsetTopByBody (el) {  
+        let offsetTop = 0  
+        while (el && el.tagName !== 'BODY') {  
+          offsetTop += el.offsetTop  
+          el = el.offsetParent  
+        }  
+        return offsetTop  
+      }  
+    function lazyLoad() {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        var windowHeight = window.innerHeight;// 视窗高度
+        var imgs = document.getElementsByClassName('lazyloadimg');
+        for (var i = 0; i < imgs.length; i++) {
+            var imgHeight = getOffsetTopByBody(imgs[i]);
+            console.log(imgs[i],imgHeight);
+            if (imgHeight < windowHeight + t) {
+                imgs[i].src = imgs[i].getAttribute(':data-src');
+                imgs[i].className = imgs[i].className.replace('lazyloadimg', '');
+                i--;
+            }
+        }
+      }
     document.getElementById('up-to-head').onmouseover = function (e) {
         if (document.getElementById('up-to-head').className === 'trans-hide slow-show iconfont icon-arrow-up')
             // console.log(document.getElementById('up-to-head').style.visibility);
@@ -291,7 +348,7 @@ window.onload = function (e) {
 
         function init() {
             // ol.childElementCount == 0| ie8 没有
-            if (ol.childElementCount == 0||ol.childNodes.length==0) {
+            if (ol.childElementCount == 0 || ol.childNodes.length == 0) {
                 //2.2 创建假图片
                 //2.2.1 克隆ul下的第一个li
                 var cloneli = ullis[0].cloneNode(true);

@@ -77,7 +77,13 @@
         <div class="search" id="search">
             <div class="search-con">
                 <form class="search-form">
-                    <input type="text" placeholder="输入区域、小区名" id="area-input" class="search-input" value="输入区域、小区名">
+                    <div id="area-input-con">
+                        <input type="text" id="area-input" class="search-input">
+                        <span class="placeholder show">输入区域、小区名</span>
+                        <span class="location-con" style="cursor: pointer;">
+                            <span class="iconfont icon-location"></span>
+                        </span>
+                    </div>
                     <ul class="drop-select search-drop-select" id="area-select">
                         <li class="active-selected">热门搜索</li>
                         <li>萧山北干</li>
@@ -120,7 +126,7 @@
                 </div>
                 <ul class="show-list">
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/06ffbebc-7c22-47cf-9e1d-bc2d8f8a030c.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -130,7 +136,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/0fa824a1-b36c-4dd1-96a8-f3e24ba769cf.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -140,7 +146,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/5b15adfd-04ab-4f41-9d57-d6b6a608948e.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -150,7 +156,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -198,17 +204,16 @@
                         <p class="band-house-intro">偶寓，是爱上租为广大青年租客设计推出的精装合租公寓，富有个性的装修风格，数次产品迭代升级，为租客用心打造温馨，舒适的居住环境。</p>
                     </li>
                     <li class="all" id="slide-box1">
-                        <!-- <img class="house-img box-shadow" src="./images/house_img.png"> -->
                         <div class="slideshow screen" id="slide-show1">
                             <ul>
                                 <li>
-                                    <img class="box-shadow" src="./images/ouyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/ouyu_1.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class=" box-shadow" src="./images/ouyu_2.png" alt="ouyu_2">
+                                    <img class=" box-shadow lazyloadimg" :data-src="./images/ouyu_2.png" src="./images/default.jpg" alt="ouyu_2">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/ouyu_3.png" alt="ouyu_3">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/ouyu_3.png" src="./images/default.jpg" alt="ouyu_3">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -221,7 +226,7 @@
                     </li>
 
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -243,13 +248,13 @@
                         <div class="slideshow screen" id="slide-show2">
                             <ul>
                                 <li>
-                                    <img class="box-shadow" src="./images/suiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/suiyu_1.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/suiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/suiyu_2.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/suiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/suiyu_3.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -261,7 +266,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -284,13 +289,13 @@
                         <div class="slideshow screen" id="slide-show3">
                             <ul>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_1.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_2.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_3.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -302,7 +307,7 @@
                         </div>
                     </li>
                     <li class="house box-shadow box-hover">
-                        <img class="house-img" src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" alt="望江新园二园">
+                        <img class="house-img lazyloadimg" :data-src="./images/7c7e2fbd-05fa-4d1f-8178-3db3d6d8b3c1.jpg@!360w_270h_1c_1e_jpg_web" src="./images/default.jpg" alt="望江新园二园">
                         <div class="house-description">
                             <p>
                                 <span class="house-price">3600元/月</span>
@@ -330,13 +335,13 @@
                         <div class="slideshow screen" id="slide-show4">
                             <ul>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_1.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_1.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_2.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_2.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                                 <li>
-                                    <img class="box-shadow" src="./images/jiyu_3.png" alt="ouyu_1">
+                                    <img class="box-shadow lazyloadimg" :data-src="./images/jiyu_3.png" src="./images/default.jpg" alt="ouyu_1">
                                 </li>
                             </ul>
                             <ol class="img-dot">
@@ -395,14 +400,14 @@
                 </div>
                 <ul class="show-list">
                     <li class="box-shadow community-desp">
-                        <img src="./images/community1.png" alt="community1" class="community-desp-img">
+                        <img :data-src="./images/community1.png" src="./images/default.jpg" alt="community1" class="community-desp-img lazyloadimg">
                         <div class="community-desp-content">
                             <h3 class="community-desp-h3 ">爱上租理想家计划VOL.2</h3>
                             <p class="community-desp-p">她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
                         </div>
                     </li>
                     <li class="box-shadow community-desp">
-                        <img src="./images/community2.png" alt="community2" class="community-desp-img">
+                        <img :data-src="./images/community2.png" src="./images/default.jpg" alt="community2" class="community-desp-img lazyloadimg">
                         <div class="community-desp-content">
                             <h3 class="community-desp-h3">我所有的美好都源自于我的女朋友</h3>
                             <p class="community-desp-p">她是一位非典型金牛座撩汉达人，她也是一位房间改造小能手，一位非典型金牛座撩汉一位…</p>
@@ -415,22 +420,22 @@
             <div class="center-con">
                 <ul class="show-list">
                     <li>
-                        <img src="./images/service-manager.png" alt="服务管家">
+                        <img class="lazyloadimg" :data-src="./images/service-manager.png" src="./images/default.jpg" alt="服务管家">
                         <h3 class="character-h3">服务管家</h3>
                         <p class="character-p">专属管家，服务贴心到位</p>
                     </li>
                     <li>
-                        <img src="./images/structure.png" alt="智能门锁">
+                        <img class="lazyloadimg" :data-src="./images/structure.png" src="./images/default.jpg" alt="智能门锁">
                         <h3 class="character-h3">智能门锁</h3>
                         <p class="character-p">一客一锁，居住安全便利</p>
                     </li>
                     <li>
-                        <img src="./images/minute-phase.png" alt="金融分期">
+                        <img class="lazyloadimg" :data-src="./images/minute-phase.png" src="./images/default.jpg" alt="金融分期">
                         <h3 class="character-h3">金融分期</h3>
                         <p class="character-p">月付房租，资金轻松灵活</p>
                     </li>
                     <li>
-                        <img src="./images/authentication.png" alt="租客认证">
+                        <img class="lazyloadimg" :data-src="./images/authentication.png" src="./images/default.jpg" alt="租客认证">
                         <h3 class="character-h3">租客认证</h3>
                         <p class="character-p">实名建档，身份真实可靠</p>
                     </li>
@@ -450,7 +455,7 @@
                     </a>
                     <a href="javascript:;" class="iconfont icon-phone sidebar-phone" id="qr-code">
                         <div class="sidebar-show hide sidebar-qr">
-                                <img xlink:href="./images/wecat.svg" src="./images/wecat.png" alt="APP二维码" width="120px" heigh="120px">
+                            <img class="lazyloadimg" xlink:href="./images/wecat.svg" :data-src="./images/wecat.png" src="./images/default.jpg" alt="APP二维码" width="120px" heigh="120px">
                             <p>爱上租APP</p>
                             <i class="triangle"></i>
                         </div>
@@ -533,7 +538,7 @@
                 </ul>
                 <ul class="qr-code footer-ul">
                     <li>
-                            <img xlink:href="./images/wecat.svg" src="./images/wecat.png" alt="APP二维码" width="120px" heigh="120px">
+                        <img class="lazyloadimg" xlink:href="./images/wecat.svg" :data-src="./images/wecat.png" src="./images/default.jpg" alt="APP二维码" width="120px" heigh="120px">
                     </li>
                     <li>
                         <span>下载爱上租APP</span>
@@ -542,7 +547,7 @@
                 </ul>
                 <ul class="qr-code footer-ul">
                     <li>
-                            <img xlink:href="./images/wecat.svg" src="./images/wecat.png" alt="APP二维码" width="120px" heigh="120px">
+                        <img class="lazyloadimg" xlink:href="./images/wecat.svg" :data-src="./images/wecat.png" src="./images/default.jpg" alt="APP二维码" width="120px" heigh="120px">
                     </li>
                     <li>
                         <span>关注爱上租公众号</span>

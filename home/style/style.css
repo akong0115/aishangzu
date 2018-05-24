@@ -20,11 +20,24 @@
 .icon-phone:before {
   content: "\e69c";
 }
-
+/* IE input X 去掉文本框的叉叉和密码输入框的眼睛图标 */
+::-ms-clear,::-ms-reveal{display:none;}
 .header .icon-phone:before {
   margin-right: 16px;
 }
-
+.icon-location:before{
+  content: '\e600';
+  cursor: pointer;
+}
+.location-con{
+  position: absolute;
+  right: 17px;
+  top: 10px;
+}
+.location-con:hover{
+  color: #f36;
+  font-size: 16px;
+}
 /* button */
 
 .red-btn {
@@ -338,7 +351,13 @@ a:hover {
   position: relative;
   float: left;
 }
-
+.placeholder{
+  font-size: 14px;
+  color: #8a8a8a;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
 .search-input {
   box-sizing: border-box;
   width: 611px;
@@ -788,7 +807,10 @@ ul li:last-child {
   height: 257px;
   text-align: center;
 }
-
+.character img{
+  height: 120px;
+  width: 120px;
+}
 .character .show-list {
   display: flex;
   justify-content: center;
@@ -879,7 +901,10 @@ ul li:last-child {
 .qr-code li {
   text-align: center;
 }
-
+.qr-code img{
+  height: 120px;
+  width: 120px;
+}
 .footer-h2 {
   opacity: .3;
   filter: alpha(opacity=30);
@@ -1150,7 +1175,7 @@ ul li:last-child {
   border-radius: 2px;
   box-sizing: border-box;
   color: #ffffff;
-  left: 50px;
+  left: 16px;
   position: absolute;
 }
 
@@ -1165,7 +1190,7 @@ ul li:last-child {
   box-sizing: border-box;
   color: #ffffff;
   position: absolute;
-  right: 50px;
+  right: 16px;
 }
 
 .current {
