@@ -79,7 +79,7 @@ window.onload = function (e) {
             dropSelect.className = 'drop-select search-drop-select show';
             var length;
             dropSelect.childElementCount ? length = dropSelect.childElementCount : length = dropSelect.childNodes.length;
-            console.log(length);
+            // console.log(length);
 
             for (var i = 0; i < length; i++) {
                 dropSelect.children[i].onclick = function (e) {
@@ -171,7 +171,7 @@ window.onload = function (e) {
         var imgs = document.getElementsByClassName('lazyloadimg');
         for (var i = 0; i < imgs.length; i++) {
             var imgHeight = getOffsetTopByBody(imgs[i]);
-            console.log(imgs[i],imgHeight);
+            // console.log(imgs[i],imgHeight);
             if (imgHeight < windowHeight + t) {
                 imgs[i].src = imgs[i].getAttribute(':data-src');
                 imgs[i].className = imgs[i].className.replace('lazyloadimg', '');
