@@ -128,18 +128,19 @@ window.onload = function (e) {
         this.children[0].className = 'sidebar-show hide  sidebar-qr';
     };
     // 滚动
-    window.onscroll = throttle(20,windowOnScroll);
+    window.onscroll = throttle(20, windowOnScroll);
     // 防抖
-     function throttle(delay, action){
+    function throttle(delay, action) {
         var last = 0;
-        return function(){
-          var curr = +new Date()
-          if (curr - last > delay){
-            action.apply(this, arguments)
-            last = curr 
-          }
+        return function () {
+            var curr = +new Date()
+            if (curr - last > delay) {
+                action.apply(this, arguments)
+                last = curr
+            }
         }
-      }
+    }
+
     function windowOnScroll() {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
         // console.log(t);
@@ -154,20 +155,21 @@ window.onload = function (e) {
             document.getElementById('up-to-head').className = 'iconfont icon-arrow-up trans-hide';
         }
         lazyLoad();
-      }
+    }
     lazyLoad();
     // 获取相对于body的距离
-    function getOffsetTopByBody (el) {  
-        let offsetTop = 0  
-        while (el && el.tagName !== 'BODY') {  
-          offsetTop += el.offsetTop  
-          el = el.offsetParent  
-        }  
-        return offsetTop  
-      }  
+    function getOffsetTopByBody(el) {
+        let offsetTop = 0
+        while (el && el.tagName !== 'BODY') {
+            offsetTop += el.offsetTop
+            el = el.offsetParent
+        }
+        return offsetTop
+    }
+
     function lazyLoad() {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
-        var windowHeight = window.innerHeight;// 视窗高度
+        var windowHeight = window.innerHeight; // 视窗高度
         var imgs = document.getElementsByClassName('lazyloadimg');
         for (var i = 0; i < imgs.length; i++) {
             var imgHeight = getOffsetTopByBody(imgs[i]);
@@ -178,7 +180,7 @@ window.onload = function (e) {
                 i--;
             }
         }
-      }
+    }
     document.getElementById('up-to-head').onmouseover = function (e) {
         if (document.getElementById('up-to-head').className === 'trans-hide slow-show iconfont icon-arrow-up')
             // console.log(document.getElementById('up-to-head').style.visibility);
